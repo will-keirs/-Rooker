@@ -1,0 +1,16 @@
+<h1>salut le landing des matches</h1>
+<h1>ICI ON DOIT CREER MATCH.NEW ET COMPARER NOS ARRAYS</h1>
+<H1>NE PAS SORTIR CETTE PHRASE DE SON CONTEXTE</H1>
+<button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
+<div><% @devs.each do |dev| %>
+  <p>your dev<%= dev.name %></p>
+    <button>I want you</button>
+  <button>next</button>
+  <p>upvote<%= dev.upvote %></p>
+  <p><%= dev.email %></p>
+  <p>Work area:<%= dev.area %></p>
+  <p>Diploma: <%= dev.diploma%></p>
+  <% end %>
+</div>
+
+<%= link_to "Retour", edit_mission_path(@mission) %>

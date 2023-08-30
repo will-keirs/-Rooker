@@ -1,2 +1,11 @@
 <h1>ROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOKER</h1>
 <p>BETTER , FASTER , CODER , FINDER</p>
+<%= link_to " go to dashboard", user_dashboard_path %>
+<div><% @devs.each do |dev| %>
+<p>your dev<%= dev.name %></p>
+<p>upvote<%= dev.upvote %></p>
+<p><%= dev.email %></p>
+<p>Work area:<%= dev.area %></p>
+<p>Diploma: <%= dev.diploma%></p>
+<% end %>
+</div>

@@ -1,1 +1,12 @@
-<h1>coucou edit</h1>
+<h1>coucou editde mission</h1>
+
+<%= simple_form_for @mission do |f| %>
+  <%= f.input :name %>
+  <%= f.input :area %>
+  <%= f.input :location %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>

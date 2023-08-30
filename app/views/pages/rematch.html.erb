@@ -1,0 +1,14 @@
+<h1>REMATCH PAGE </h1>
+<button><%= link_to "VOS PROFILS", match_path(@match) %></button>
+<div><% @devs.each do |dev| %>
+  <p>your dev<%= dev.name %></p>
+  <button>I want you</button>
+  <button>next</button>
+  <p>upvote<%= dev.upvote %></p>
+  <p><%= dev.email %></p>
+  <p>Work area:<%= dev.area %></p>
+  <p>Diploma: <%= dev.diploma%></p>
+  <% end %>
+</div>
+
+<%= link_to "Retour", edit_mission_path(@mission) %>

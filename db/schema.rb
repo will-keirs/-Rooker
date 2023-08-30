@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_120224) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_29_105757) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devs", force: :cascade do |t|
     t.integer "soft_skill"
     t.integer "language"
-    t.string "diploma"
     t.boolean "availability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "phone"
+    t.string "area"
+    t.integer "upvote"
+    t.string "location"
+    t.string "diploma"
+    t.string "toto"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -36,8 +44,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_120224) do
 
   create_table "missions", force: :cascade do |t|
     t.string "name"
-    t.integer "language"
-    t.integer "soft_skill"
     t.string "area"
     t.string "location"
     t.text "description"

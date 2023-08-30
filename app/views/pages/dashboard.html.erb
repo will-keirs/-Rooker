@@ -1,1 +1,20 @@
 <h1>DA FKIN DASHBOARD</h1>
+<div class="mission"> <%= link_to "New mission", new_mission_path(@mission) %></div>
+<div>Missions:
+    <% @missions.each do |mission| %>
+      <p><strong><%= mission.name%></strong></p>
+      <button><%= link_to "GO!", mission_path(mission) %></button>
+      <p>Languages: <%= mission.language %></p>
+      <p>Location: <%= mission.location%></p>
+      <p>Description: <%= mission.description%></p>
+    <% end %>
+</div>
+<div>
+  FAVORIS
+<div>
+HISTORIQUE
+  <% @missions.each do |mission|  %>
+    <p><strong><%= link_to mission.name, mission_path(mission)%></strong></p>
+    <p><%= link_to "renew", rematch_path(mission.id) %>
+  <% end %>
+</div>
