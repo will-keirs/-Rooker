@@ -1,6 +1,6 @@
 class MatchesController < ApplicationController
   def index
-    @clara = Mission.find(16)
+
     @mission = Mission.last
     @matches = Match.all
   end
