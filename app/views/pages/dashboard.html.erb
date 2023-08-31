@@ -8,13 +8,45 @@
       <p>Location: <%= mission.location%></p>
       <p>Description: <%= mission.description%></p>
     <% end %>
+      <% @missions.each do |mission|  %>
+        <p><strong><%= link_to mission.name, mission_path(mission)%></strong></p>
+        <p><%= link_to "renew", rematch_path(mission.id) %></p>
+      <% end %>
 </div>
-<div>
   FAVORIS
-<div>
-HISTORIQUE
-  <% @missions.each do |mission|  %>
-    <p><strong><%= link_to mission.name, mission_path(mission)%></strong></p>
-    <p><%= link_to "renew", rematch_path(mission.id) %>
-  <% end %>
+<div class="container">
+<h2> History </h2>
+<div class="custom-container">
+  <div class="history-comp">
+    <div class="hist-elmnt1">
+      <h3>Titre</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Sem viverra aliquet eget sit amet tellus cras
+      </p>
+    </div>
+    <div class="hist-elmnt2">
+      <div class="soft-elmnt">
+      <h4>Soft skills</h4>
+      <p> Adaptability, Sense of Organization, Rigour </p>
+      </div>
+      <div class="date-elmnt">
+        <h4> Date</h4>
+        <p> from 01/10/2023 to 30/10/2023 </p>
+      </div>
+    </div>
+    <div class="hist-elmnt3">
+      <h4>Languages</h4>
+      <%# <%= image_tag("13java.svg") %>
+    </div>
+    <div class="hist-elmnt4">
+      <h4>Devs</h4>
+      <div class="dev-elmnt">
+
+      </div>
+      <div>
+        <p>"Go re-match!"</p>
+      </div>
+    </div>
+  </div>
 </div>
