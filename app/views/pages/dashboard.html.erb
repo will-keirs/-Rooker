@@ -1,7 +1,8 @@
 <h1>Your dashboard</h1>
 <div class="container">
-<div class="createmission">
-  <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
+  <div class="createmission">
+    <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
+    </div>
   </div>
 </div>
   <div class="misfavs">
@@ -11,58 +12,73 @@
           <div class="namego">
             <p class="missionname"><strong><%= link_to mission.name, mission_path(mission) %></strong></p>
             <p class="go"><%= link_to "Go", mission_path(mission) %></p>
-           </div>
+          </div>
         <% end %>
-    </div>
-
-<div class="favoris">
-  <h2>Favorites</h2>
-  <%= current_user.fav %>
-  <ul>
-<%# il faut afficher ici les avatars, noms et infos des devs %>
-  <li>T. Lannister</li>
-  <li>D. Targaryen</li>
-  <li>N. Stark</li>
-  <li>R. Barateno</li>
-  <li>N. Stark</li>
-  </ul>
-</div>
+      </div>
+  <div class="favoris">
+    <h2>Favorites</h2>
+    <%= current_user.fav %>
+    <ul>
+  <%# il faut afficher ici les avatars, noms et infos des devs %>
+    <li>T. Lannister</li>
+    <li>D. Targaryen</li>
+    <li>N. Stark</li>
+    <li>R. Barateno</li>
+    <li>N. Stark</li>
+    </ul>
   </div>
-<div>
-<h2> History </h2>
-<div class="custom-container">
-  <div class="history-comp">
-    <div class="hist-elmnt1">
-      <h3>Titre</h3>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Sem viverra aliquet eget sit amet tellus cras
-      </p>
     </div>
-    <div class="hist-elmnt2">
-      <div class="soft-elmnt">
-      <h4>Soft skills</h4>
-      <p> Adaptability, Sense of Organization, Rigour </p>
-      </div>
-      <div class="date-elmnt">
-        <h4> Date</h4>
-        <p> from 01/10/2023 to 30/10/2023 </p>
-      </div>
-    </div>
-    <div class="hist-elmnt3">
-      <h4>Languages</h4>
-      <%# <%= image_tag("13java.svg") %>
-    </div>
-    <div class="hist-elmnt4">
-      <h4>Devs</h4>
-      <div class="dev-elmnt">
-
-      </div>
-      <div>
-        <p>"Go re-match!"</p>
+  <div>
+    <h2> History </h2>
+    <div class="custom-container">
+      <div class="history-comp">
+        <div class="hist-elmnt1">
+          <h3>Titre</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Sem viverra aliquet eget sit amet tellus cras
+          </p>
+        </div>
+        <div class="hist-elmnt2">
+          <div class="soft-elmnt">
+            <h4>Soft skills</h4>
+            <p> Adaptability, Sense of Organization, Rigour </p>
+          </div>
+          <div class="date-elmnt">
+            <h4> Date</h4>
+            <p> from 01/10/2023 to 30/10/2023 </p>
+          </div>
+        </div>
+        <div class="hist-elmnt3">
+          <div>
+            <h4>Languages</h4>
+          </div>
+          <div>
+            <%= image_tag("01HTML.svg", size: "20x20")%>
+            <%= image_tag("02CSS.svg", size: "20x20")%>
+            <%= image_tag("03JS.svg", size: "20x20")%>
+            <%= image_tag("04Ruby.svg", size: "20x20")%>
+            <%= image_tag("05Rails.svg", size: "20x20")%>
+          </div>
+        </div>
+        <div class="hist-elmnt4">
+          <div>
+            <h4>Devs</h4>
+          </div>
+          <div class="dev-elmnt">
+            <%= image_tag("Anais.jpg", size: "56x56", class: "rounded-circle")%>
+            <%= image_tag("Alice.jpg", size: "56x56", class: "rounded-circle")%>
+            <%= image_tag("Thomas.jpg", size: "56x56", class: "rounded-circle")%>
+            <%= image_tag("Clara.jpg", size: "56x56", class: "rounded-circle")%>
+          </div>
+          <div class="rematch">
+            <p>"Go re-match!"</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 </div>
 </div>
 </div>

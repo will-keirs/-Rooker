@@ -13,18 +13,45 @@
 
 .hist-elmnt1 {
   width: 30%;
+
+   h3 {
+    padding-top: -4px;
+    margin-bottom: 2px;
+  }
 }
 
 .hist-elmnt2 {
-  border-left: 5px black;
+  border-left: 1px solid black;
   width: 30%;
 }
+
+.soft-elmnt {
+  padding-left: 20px;
+}
+.date-elmnt {
+  padding-left: 20px;
+}
+
 .hist-elmnt3 {
-  border-left: 2px black;
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  border-left: 1px solid black;
+  width: 15%;
+  padding-left: 20px;
 }
 
 .hist-elmnt4 {
-  border-left: 2px black;
-  width: 20%;
+  border-left: 1px solid black;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.dev-elmnt {
+
+}
+
+
+.rematch  {
+  justify-content: end;
 }
