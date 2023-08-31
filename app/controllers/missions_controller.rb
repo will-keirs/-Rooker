@@ -59,13 +59,13 @@ class MissionsController < ApplicationController
      redirect_to match_landing_path
     end
   end
-
   def lmatch
     @devs = Dev.all
+    @matchable_devs = []
+    @best = Dev.first.id
     @mission = Mission.last
-    # @match = Match.find(params[:id])
-    # @match.mission = @mission
   end
+
   private
 
   def mission_params

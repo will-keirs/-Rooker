@@ -1,25 +1,27 @@
  <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
-  <div class="match-outer-card">
+  <div data-controller="match" class="match-outer-card">
     <div class="big-center">
 
       <div class="match-dev-infos">
         <div class="dev-img">
           <%= image_tag "image.jpg", style: 'height:300px;width:300px;' %>
-          <div class="match-buttons">
-            <h1><strong>I want you</strong></h1>
-            <h1> <strong>Next</strong></h1>
+          <div  class="match-buttons" >
+            <button data-action="click->match#selected"> IwantU</button>
+            <button data-action="click->match#next"> Next</button>
           </div>
         </div>
-      <div class="dev-details">
+      <div  class="dev-details">
       <div>
-        <h3>@dev.name</h3>
-        <h4>@dev.diploma</h4>
+        <p data-match-target="selection"> <% @best %></p>
+        <% @thebest = Dev.find(@best) %>
+        <h3 ><%= @thebest.name %></h3>
+        <h4><%= @thebest.diploma %></h4>
       </div>
       <div>
         <h3><strong>FETCH GITHUB GRAPH HERE</strong></h3>
       </div>
-      <div>
-        <p>
+      <div >
+        <p class="dev-description">
            Dev personal description on subscribeDev personal
            description on subscribeDev personal description on subscribeDev
            personal description on subscribeDev personal description on subscribe
@@ -44,9 +46,9 @@
       <h4><strong>Hobbies</strong></h4>
         <p>dev hobbies on subscribe, j'aime les licornes et le saut en parachute</p>
       </div >
-      <div class="button-div">
-        <button>Edit mission</button>
-        <button>Selected profile</button>
+      <div class="button-div" >
+        <button><%= link_to "Reselect", edit_mission_path(@mission) %></button>
+        <button > <%=link_to "Selected profiles", mission_matches_path(@mission)  %></button>
       </div>
       </div>
     </div>

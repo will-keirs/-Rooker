@@ -39,8 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.boolean "availability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "diploma"
-    t.string "toto"
     t.string "name"
     t.string "email"
     t.string "password"
@@ -48,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.string "area"
     t.integer "upvote"
     t.string "location"
+    t.string "diploma"
   end
 
   create_table "devsoftmissions", force: :cascade do |t|

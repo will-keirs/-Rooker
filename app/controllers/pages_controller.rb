@@ -26,6 +26,8 @@ class PagesController < ApplicationController
 
   def lmatch
     @devs = Dev.all
+    @matchable_devs = []
+    @best = Dev.first
     @mission = Mission.last
     @match = Match.find(params[:id])
     @match.mission = @mission
