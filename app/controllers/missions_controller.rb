@@ -9,14 +9,44 @@ class MissionsController < ApplicationController
 
   def new
     @mission = Mission.new
+    @dev = Dev.last
   end
 
   def create
     @mission = Mission.new(mission_params)
     @mission.user_id = current_user.id
-    @mission.save!
-    # faire le calcul des match
-    redirect_to match_landing_path
+    if @mission.save!
+      # faire le calcul des match
+      redirect_to step_two_path(@mission)
+    else
+      render :new
+    end
+  end
+
+  def new_part_two
+    @mission = Mission.find(params[:id])
+  end
+
+  def form_update_step_two
+    @mission = Mission.find(params[:id])
+    if @mission.save!
+      redirect_to step_three_path(@mission)
+    else
+      render :new_part_two
+    end
+  end
+
+  def new_part_three
+    @mission = Mission.find(params[:id])
+  end
+
+  def form_update_step_three
+    @mission = Mission.find(params[:id])
+    if @mission.save!
+      redirect_to step_three_path(@mission)
+    else
+      render :new_part_two
+    end
   end
 
   def edit
@@ -25,8 +55,9 @@ class MissionsController < ApplicationController
 
   def update
     @mission = Mission.find(params[:id])
-    @mission.update(mission_params)
-    redirect_to match_landing_path
+    if @mission.update!(mission_params)
+     redirect_to match_landing_path
+    end
   end
 
   def lmatch
@@ -35,7 +66,6 @@ class MissionsController < ApplicationController
     # @match = Match.find(params[:id])
     # @match.mission = @mission
   end
-
   private
 
   def mission_params

@@ -4,7 +4,7 @@
     <% @missions.each do |mission| %>
       <p><strong><%= mission.name%></strong></p>
       <button><%= link_to "GO!", mission_path(mission) %></button>
-      <p>Languages: <%= mission.language %></p>
+      <%# <p>Languages: <%= mission.language %>
       <p>Location: <%= mission.location%></p>
       <p>Description: <%= mission.description%></p>
     <% end %>

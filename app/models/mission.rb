@@ -2,6 +2,9 @@ class Mission < ApplicationRecord
   belongs_to :user
   has_many :matches
   has_many :devs, through: :matches
-  enum language: [ :Javascript, :Ruby, :Python, :PHP, :HTML5 ]
-  enum soft_skill: [ :Powerful, :Jesus, :Fatality, :KO, :Kameheamehaaaaaaaa ]
+  has_many :devlangmissions
+  has_many :devsoftmissions
+  has_many :languages, through: :devlangmissions
+  has_many :soft_skills, through: :devsoftmissions
+
 end

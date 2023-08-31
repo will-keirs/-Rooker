@@ -1,0 +1,59 @@
+.match-dev-infos {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  column-count:2;
+  column-gap: 2px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dev-img {
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  display: grid;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dev-details {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.match-buttons {
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.big-center {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(218, 219, 221);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#main-title {
+  display: flex;
+  justify-content:flex-start;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-div li {
+    display: flex;
+}
