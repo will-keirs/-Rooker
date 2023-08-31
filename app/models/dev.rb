@@ -7,5 +7,4 @@ class Dev < ApplicationRecord
   attribute :diploma, :string
   attribute :availability, :boolean
 
-  validates :language, presence: true
 end
