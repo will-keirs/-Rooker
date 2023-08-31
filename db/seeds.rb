@@ -50,6 +50,7 @@ mission = Mission.new(
 )
 mission.save!
 
+
 # dev = Dev.new(
 #   name: "Johnny",
 #   email: "johnny@johnny.com",
@@ -60,6 +61,7 @@ mission.save!
 #   upvote: 10,
 #   location: "Marseille",
 #   diploma: "Le Wagon 2023",
+
 #   # soft_skill: ["teamwork", "stress control", "communication"],
 #   # language: ["Python", "HTML5"]
 # )
@@ -74,10 +76,12 @@ mission.save!
 #   upvote: 45,
 #   location: "Lyon",
 #   diploma: "Le Wagon 2020",
+
 #   # soft_skill: ["autonomy", "teamwork", "communication"],
 #   # language: ["Python", "HTML5", "Ruby", "Javascript"]
 # )
 # dev.save!
+
 # dev = Dev.new(
 #   name: "Emily",
 #   email: "emily@emily.com",
@@ -88,10 +92,12 @@ mission.save!
 #   upvote: 4,
 #   location: "Marseille",
 #   diploma: "Le Wagon 2023",
+
 #   # soft_skill: ["adaptative", "stress control", "organised"],
 #   # language: ["Ruby", "HTML5"]
 # )
 # dev.save!
+
 # dev = Dev.new(
 #   name: "Anthony",
 #   email: "anthony@anthony.com",
@@ -102,6 +108,7 @@ mission.save!
 #   upvote: 10,
 #   location: "Paris",
 #   diploma: "Le Wagon 2019",
+
 #   # soft_skill: ["reactivity", "adaptative"],
 #   # language: ["Python", "Javascript", "Ruby"]
 # )
@@ -132,6 +139,7 @@ mission.save!
 #   comment: "perfecto",
 #   dev_id: 4,
 #   mission_id: 5,
+
 #   accepted: true
 # )
 # match3.save!

@@ -1,11 +1,53 @@
-<h1>coucou form a la con de mission</h1>
-<%= simple_form_for @mission do |f| %>
-  <%= f.input :name %>
-  <%= f.input :area %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.button :submit %>
-<% end %>
+<h1>Mission Details</h1>
+
+<div class="form_container">
+  <div class="mission-form">
+  <h1>Step 1</h1>
+    <br />
+      <h2>Please describe your Mission and needs</h2>
+        <%= simple_form_for @mission do |f| %>
+          <%= f.input :name, :placeholder => "Mission name"%>
+          <%= f.input :area, :placeholder =>"Business area"%>
+          <%= f.input :location, :placeholder =>"Location"%>
+          <%= f.input :price, :placeholder =>"0"%>
+          <%= f.input :start_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+            <%= f.input :end_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+          <%= f.input :description, :placeholder =>"Describe your mission here..."%>
+          <%= f.button :submit, 'Next step' %>
+        <% end %>
+  </div>
+</div>
+
+                <%# <h2 class="fs-title">Mission Details</h2>
+                <h3 class="fs-subtitle">Please describe your Mission and Needs</h3>
+                <input type="text" name="Name" />
+                <input type="text" name="Area" />
+                <input type="text" name="Location" />
+                <input type="text" name="Description" />
+                <input type="integer" name="Price" />
+                 <input type="date" name="Start date"/>
+                  <input type="date" name="End date"/>
+
+
+                <h2 class="fs-title">Languages</h2>
+                <h3 class="fs-subtitle">Choose up to 5 languages</h3>
+                <input type="text" name="Language 1" placeholder="HTML"/>
+                <input type="text" name="Language 2" placeholder="Ruby"/>
+                <input type="text" name="Language 3" placeholder="Python"/>
+                <input type="text" name="Language 4" placeholder="PHP"/>
+                <input type="text" name="Language 5" placeholder="Javascript"/>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Soft Skills</h2>
+                <h3 class="fs-subtitle">Choose up to 5 soft skills</h3>
+                <input type="text" name="Soft skill 1" placeholder="Adaptability"/>
+                <input type="text" name="Soft skill 2" placeholder="Strength of proposal"/>
+                <input type="text" name="Soft skill 3" placeholder="Perseverance"/>
+                <input type="text" name="Soft skill 4" placeholder="Communication"/>
+                <input type="text" name="Soft skill 5" placeholder="Stress management"/> %>

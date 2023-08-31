@@ -1,16 +1,79 @@
-<h1>salut le landing des matches</h1>
-<h1>ICI ON DOIT CREER MATCH.NEW ET COMPARER NOS ARRAYS</h1>
-<H1>NE PAS SORTIR CETTE PHRASE DE SON CONTEXTE</H1>
-<button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
-<div><% @devs.each do |dev| %>
-  <p>your dev<%= dev.name %></p>
-    <button>I want you</button>
-  <button>next</button>
-  <p>upvote<%= dev.upvote %></p>
-  <p><%= dev.email %></p>
-  <p>Work area:<%= dev.area %></p>
-  <p>Diploma: <%= dev.diploma%></p>
-  <% end %>
-</div>
+ <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
+  <div class="match-outer-card">
+    <div class="big-center">
 
-<%= link_to "Retour", edit_mission_path(@mission) %>
+      <div class="match-dev-infos">
+        <div class="dev-img">
+          <%= image_tag "image.jpg", style: 'height:300px;width:300px;' %>
+          <div class="match-buttons">
+            <h1><strong>I want you</strong></h1>
+            <h1> <strong>Next</strong></h1>
+          </div>
+        </div>
+      <div class="dev-details">
+      <div>
+        <h3>@dev.name</h3>
+        <h4>@dev.diploma</h4>
+      </div>
+      <div>
+        <h3><strong>FETCH GITHUB GRAPH HERE</strong></h3>
+      </div>
+      <div>
+        <p>
+           Dev personal description on subscribeDev personal
+           description on subscribeDev personal description on subscribeDev
+           personal description on subscribeDev personal description on subscribe
+        </p>
+      </div>
+      <div>
+        <h4><strong>Languages</strong></h4>
+        <p>@dev.languages.icons</p>
+      </div>
+      <div class="skill-div">
+        <h4><strong>Soft skills</strong></h4>
+        <ul>
+          <li>skill 1</li>
+          <li>skill 2</li>
+          <li>skill 3</li>
+          <li>skill 4</li>
+          <li>skill 5</li>
+          <li>skill 6</li>
+        </ul>
+      </div>
+      <div>
+      <h4><strong>Hobbies</strong></h4>
+        <p>dev hobbies on subscribe, j'aime les licornes et le saut en parachute</p>
+      </div >
+      <div class="button-div">
+        <button>Edit mission</button>
+        <button>Selected profile</button>
+      </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
+  <div><% @devs.each do |dev| %>
+    <p>your dev<%= dev.name %></p>
+      <button>I want you</button>
+    <button>next</button>
+    <p>upvote<%= dev.upvote %></p>
+    <p><%= dev.email %></p>
+    <p>Work area:<%= dev.area %></p>
+    <p>Diploma: <%= dev.diploma%></p>
+    <% end %>
+  </div>
+
+    <button><%= link_to 'Back', :back %></button>
+</div>
