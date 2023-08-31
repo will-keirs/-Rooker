@@ -1,33 +1,37 @@
 puts "creation m..."
-# User.destroy_all
+Devlangmission.destroy_all
+Devsoftmission.destroy_all
+Match.destroy_all
+Mission.destroy_all
+User.destroy_all
 
-# user = User.new(
-#   email: "lolo@gmail.com",
-#   password: "123456",
-#   name: "tutu",
-#   company: "webcompany",
-#   phone: "0456342345",
-#   area: "tech",
-#   location: "paris",
-#   upvote: 2,
-#   fav: "Excellent worker"
-# )
-# user.save!
+user1 = User.new(
+  email: "lolo@gmail.com",
+  password: "123456",
+  name: "tutu",
+  company: "webcompany",
+  phone: "0456342345",
+  area: "tech",
+  location: "paris",
+  upvote: 2,
+  fav: "Excellent worker"
+)
+user1.save!
 
-# user = User.new(
-#   email: "lele@gmail.com",
-#   password: "123456",
-#   name: "tata",
-#   company: "Webagency",
-#   phone: "0326311345",
-#   area: "marketing",
-#   location: "Lyon",
-#   upvote: 1,
-#   fav: "Amazingly done !"
-# )
-# user.save!
+user2 = User.new(
+  email: "lele@gmail.com",
+  password: "123456",
+  name: "tata",
+  company: "Webagency",
+  phone: "0326311345",
+  area: "marketing",
+  location: "Lyon",
+  upvote: 1,
+  fav: "Amazingly done !"
+)
+user2.save!
 
-mission = Mission.new(
+mission1 = Mission.new(
   name: "Projet Danone",
   area: "food",
   location: "Paris",
@@ -35,11 +39,11 @@ mission = Mission.new(
   price: "1000",
   start_date: "01/01/2024",
   end_date: "01/05/2024",
-  user_id: 1
+  user: user1
 )
-mission.save!
+mission1.save!
 
-mission = Mission.new(
+mission2 = Mission.new(
   name: "Projet Tesla",
   area: "automotive",
   location: "San Francisco",
@@ -47,9 +51,9 @@ mission = Mission.new(
   price: "1500",
   start_date: "01/03/2024",
   end_date: "01/05/2024",
-  user_id: 2
+  user: user2
 )
-mission.save!
+mission2.save!
 
 dev1 = Dev.new(
   name: "Johnny",
@@ -105,31 +109,31 @@ dev4.save!
 
 match = Match.new(
   comment: "Amazing",
-  dev_id: 11,
-  mission_id: 6,
+  dev: dev1,
+  mission: mission1,
   accepted: true
 )
 match.save!
 match1 = Match.new(
   comment: "the best ever",
-  dev_id: 9,
-  mission_id: 5,
+  dev: dev1,
+  mission: mission1,
   accepted: true
 )
 match1.save!
 
 match2 = Match.new(
   comment: "nobody moves like this",
-  dev_id: 10,
-  mission_id: 6,
+  dev: dev1,
+  mission: mission1,
   accepted: true
 )
 match2.save!
 
 match3 = Match.new(
   comment: "perfecto",
-  dev_id: 10,
-  mission_id: 5,
+  dev: dev1,
+  mission: mission1,
   accepted: true
 )
 match3.save!
@@ -146,12 +150,12 @@ sk3 = SoftSkill.create!(skill: "Rigorous")
 sk5 = SoftSkill.create!(skill: "Teamwork")
 sk4 = SoftSkill.create!(skill: "Curious")
 
-Devlangmission.create!(dev: dev1, language: l1, mission_id: 5)
-Devlangmission.create!(dev: dev2, language: l2, mission_id: 6)
-Devlangmission.create!(dev: dev3, language: l3, mission_id: 5)
-Devlangmission.create!(dev: dev4, language: l, mission_id: 6)
+Devlangmission.create!(dev: dev1, language: l1, mission: mission1)
+Devlangmission.create!(dev: dev2, language: l2, mission: mission2)
+Devlangmission.create!(dev: dev3, language: l3, mission: mission2)
+Devlangmission.create!(dev: dev4, language: l, mission: mission1)
 
-Devsoftmission.create!(dev: dev1, soft_skill: sk1, mission_id: 5)
-Devsoftmission.create!(dev: dev2, soft_skill: sk2, mission_id: 6)
-Devsoftmission.create!(dev: dev3, soft_skill: sk3, mission_id: 5)
-Devsoftmission.create!(dev: dev4, soft_skill: sk4, mission_id: 6)
+Devsoftmission.create!(dev: dev1, soft_skill: sk1, mission: mission1)
+Devsoftmission.create!(dev: dev2, soft_skill: sk2, mission: mission1)
+Devsoftmission.create!(dev: dev3, soft_skill: sk3, mission: mission2)
+Devsoftmission.create!(dev: dev4, soft_skill: sk4, mission: mission2)
