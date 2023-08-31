@@ -22,10 +22,6 @@ class PagesController < ApplicationController
   end
 
   def rematch
-    @missions = Mission.all
-    @user = current_user
-    @mission = Mission.find(params[:id], @user.id)
-    @match = @mission.matches
   end
 
   def lmatch

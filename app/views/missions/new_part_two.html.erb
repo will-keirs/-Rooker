@@ -1,9 +1,13 @@
 
 <div class="form_container">
   <div class="mission-form">
-  <h1>Your can edit your Mission here</h1>
+  <h1>Step 2</h1>
     <br />
-        <%= simple_form_for @mission, :url => match_landing_path, :method => :get do |f| %>
+      <h2>Please describe your Mission and needs</h2>
+        <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
+          <%= simple_fields_for :soft_skills do |sk| %>
+            <% sk.input :skills, collection: User.all %>
+          <% end %>
           <%= f.input :name, :placeholder => "Mission name"%>
           <%= f.input :area, :placeholder =>"Business area"%>
           <%= f.input :location, :placeholder =>"Location"%>
@@ -15,8 +19,8 @@
                   as: :string,
                   input_html: { data: { controller: "datepicker" } } %>
           <%= f.input :description, :placeholder =>"Describe your mission here..."%>
-          <%= f.button :submit, 'Back to Match' %>
+          <%= f.button :submit, "Next step"%>
         <% end %>
   </div>
 </div>
-<button><%= link_to "Dashboard", user_dashboard_path %></button>
+<button><%= link_to 'Back', edit_mission_path(@mission) %></button>
