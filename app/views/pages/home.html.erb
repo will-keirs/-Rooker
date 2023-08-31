@@ -1,14 +1,7 @@
-<h1>ROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOKER</h1>
-<p>BETTER , FASTER , CODER , FINDER</p>
-<%= link_to " go to dashboard", user_dashboard_path %>
-<div><% @devs.each do |dev| %>
-<p>your dev<%= dev.name %></p>
-<p>upvote<%= dev.upvote %></p>
-<p><%= dev.email %></p>
-<p>Work area:<%= dev.area %></p>
-<p>Diploma: <%= dev.diploma%></p>
-<% end %>
-
-
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://dailygeekshow.com/wp-content/uploads/2020/01/une-matrix-recette.jpg);">
+  <div class="container">
+    <h1 class="megatitle">ROOKER, find the best dev in SECONDS !</h1>
+    <p>Better, Faster, Coder, Finder!</p>
+    <%= link_to "Let's go", user_dashboard_path, class: "btn btn-gradient" %>
+  </div>
 </div>

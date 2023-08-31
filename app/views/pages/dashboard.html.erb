@@ -4,10 +4,11 @@
     <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
     </div>
   </div>
-    <div class="misfavs">
-      <div class="missions">
-        <h2>Missions</h2>
-        <% @missions.first(3).each do |mission| %>
+</div>
+  <div class="misfavs">
+    <div class="missions">
+     <h2>Missions</h2>
+        <% @missions.last(3).each do |mission| %>
           <div class="namego">
             <p class="missionname"><strong><%= link_to mission.name, mission_path(mission) %></strong></p>
             <p class="go"><%= link_to "Go", mission_path(mission) %></p>
@@ -77,4 +78,7 @@
       </div>
     </div>
   </div>
+
+</div>
+</div>
 </div>
