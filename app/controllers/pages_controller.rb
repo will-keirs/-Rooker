@@ -22,7 +22,6 @@ class PagesController < ApplicationController
   end
 
   def rematch
-
   end
 
   def lmatch

@@ -1,0 +1,30 @@
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-comp {
+  display:flex;
+  justify-content: center;
+  background-color: #D2D2D2;
+  padding: 20px;
+}
+
+.hist-elmnt1 {
+  width: 30%;
+}
+
+.hist-elmnt2 {
+  border-left: 5px black;
+  width: 30%;
+}
+.hist-elmnt3 {
+  border-left: 2px black;
+  width: 20%;
+}
+
+.hist-elmnt4 {
+  border-left: 2px black;
+  width: 20%;
+}
