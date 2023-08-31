@@ -8,4 +8,5 @@ class Dev < ApplicationRecord
 
   attribute :diploma, :string
   attribute :availability, :boolean
+
 end

@@ -1,0 +1,72 @@
+.misfavs {
+  display:flex;
+  justify-content: center;
+  margin: 30px;
+
+}
+
+.missions {
+  background-color: #EBEBEB;
+  padding: 20px;
+  width:500px;
+  display:grid;
+  color:black;
+}
+
+.missions h2 {
+  font-size: 29px;
+}
+
+.missions a{
+  color: black;
+  text-decoration: none;
+  font-size:16px;
+}
+
+.missions a:hover{
+  color: rgb(171, 170, 170);
+}
+
+
+.missionname {
+  background-color: #dbd9d9;
+  padding: 15px;
+  width: 400px;
+}
+
+.go {
+  background-color: black;
+  color: white;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.go a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.namego {
+  display:flex;
+  justify-content: space-between;
+}
+
+.favoris {
+  background-color: #EBEBEB;
+  padding: 20px;
+  width: 500px;
+  margin-left: 20px;
+}
+
+.favoris ul{
+  list-style-type: none;
+}
+
+.favoris h2 {
+  font-size: 29px;
+}
