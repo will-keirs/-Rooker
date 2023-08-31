@@ -1,13 +1,17 @@
-<h1>coucou les matches</h1>
-<button><%= link_to "retour dashboard", user_dashboard_path %></button>
-<button><%= link_to "retour aux matches", match_landing_path(@mission) %></button>
-<div>
-  <p><%= @clara.name %></p>
-  <p><%= @clara.description %></p>
-</div>
-<div>
-     <% @clara.matches.each do |match| %>
+<h1>The DEVS who match with you</h1>
+
+  <div>
+    <h2><%= @mission.name %></h2>
+    <p><%= @mission.description %></p>
+  </div>
+
+  <div>
+      <% @mission.matches.each do |match| %>
         <h2><%= match.dev_id %></h2>
-         <p><%= match.comment %></p>
+        <p><%= match.comment %></p>
       <% end %>
-</div>
+  </div>
+    <div class="buttons-matches">
+      <%= link_to "Back to dashboard", user_dashboard_path %>
+      <%= link_to "Back to matches", match_landing_path(@mission) %>
+    </div>
