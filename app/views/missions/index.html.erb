@@ -1,2 +1,4 @@
 <h1>coucou LES MISSIONS</h1>
- <%= @user.missions.all %>
+<% current_user.missions.all.each do |mission| %>
+  <p>Nom de ma misison : <%= mission.name %> </p>
+<% end %>
