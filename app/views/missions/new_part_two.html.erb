@@ -3,11 +3,13 @@
   <div class="mission-form">
   <h1>Step 2</h1>
     <br />
-      <h2>Which languages do you need ?</h2>
+      <h2>What languages do you need ?</h2>
         <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
-              <%= simple_fields_for :languages do |l| %>
-              <% l.input :langtype, collection: Language.all %>
+          <%= simple_fields_for :languages do |sk| %>
+            <% sk.input :languages, collection: Language.all %>
           <% end %>
+          <%= f.hidden_field :query, value: @best %>
+
           <%= f.button :submit, "Next step"%>
         <% end %>
   </div>
