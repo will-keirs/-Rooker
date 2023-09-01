@@ -3,24 +3,14 @@
   <div class="mission-form">
   <h1>Step 3</h1>
     <br />
-      <h2>Please describe your Mission and needs</h2>
+      <h2>Which Soft skills do you need ?</h2>
         <%= simple_form_for @mission do |f| %>
-            <%= simple_fields_for :languages do |l| %>
-              <% l.input :langtype, collection: User.all %>
-            <% end %>
-          <%= f.input :name, :placeholder => "Mission name"%>
-          <%= f.input :area, :placeholder =>"Business area"%>
-          <%= f.input :location, :placeholder =>"Location"%>
-          <%= f.input :price, :placeholder =>"0"%>
-          <%= f.input :start_date,
-                  as: :string,
-                  input_html: { data: { controller: "datepicker" } } %>
-            <%= f.input :end_date,
-                  as: :string,
-                  input_html: { data: { controller: "datepicker" } } %>
-          <%= f.input :description, :placeholder =>"Describe your mission here..."%>
+        <%= simple_fields_for :soft_skills do |sk| %>
+          <% sk.input :skills, collection: SoftSkill.all %>
+          <% end %>
+          <%= f.hidden_field :query, value: @best %>
           <%= f.button :submit, "Match!" %>
         <% end %>
   </div>
 </div>
- <button><%= link_to 'Back', step_two_path(@mission) %></button>
+<button><%= link_to 'Back', step_two_path(@mission) %></button>
