@@ -4,6 +4,7 @@ Devsoftmission.destroy_all
 Match.destroy_all
 Mission.destroy_all
 User.destroy_all
+
 user1 = User.new(
   email: "lolo@gmail.com",
   password: "123456",
@@ -16,6 +17,7 @@ user1 = User.new(
   fav: "Excellent worker"
 )
 user1.save!
+
 user2 = User.new(
   email: "lele@gmail.com",
   password: "123456",
@@ -28,6 +30,7 @@ user2 = User.new(
   fav: "Amazingly done !"
 )
 user2.save!
+
 mission1 = Mission.new(
   name: "Projet Danone",
   area: "food",
@@ -39,6 +42,7 @@ mission1 = Mission.new(
   user: user1
 )
 mission1.save!
+
 mission2 = Mission.new(
   name: "Projet Tesla",
   area: "automotive",
@@ -50,6 +54,7 @@ mission2 = Mission.new(
   user: user2
 )
 mission2.save!
+
 dev1 = Dev.new(
   name: "Johnny",
   email: "johnny@johnny.com",
@@ -167,6 +172,10 @@ Devlangmission.create!(dev: dev3, language: l10, mission: mission2)
 Devlangmission.create!(dev: dev4, language: l4, mission: mission1)
 Devlangmission.create!(dev: dev1, language: l2, mission: mission1)
 Devlangmission.create!(dev: dev3, language: l7, mission: mission2)
+Devlangmission.create!(dev: dev1, language: l1, mission: mission1)
+Devlangmission.create!(dev: dev2, language: l2, mission: mission2)
+Devlangmission.create!(dev: dev3, language: l3, mission: mission2)
+Devlangmission.create!(dev: dev4, language: l, mission: mission1)
 
 
 Devsoftmission.create!(dev: dev1, soft_skill: sk1, mission: mission1)
@@ -197,3 +206,4 @@ Devsoftmission.create!(dev: dev1, soft_skill: sk11, mission: mission1)
 Devsoftmission.create!(dev: dev2, soft_skill: sk12, mission: mission1)
 Devsoftmission.create!(dev: dev3, soft_skill: sk13, mission: mission2)
 Devsoftmission.create!(dev: dev4, soft_skill: sk, mission: mission2)
+

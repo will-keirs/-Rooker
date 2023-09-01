@@ -4,7 +4,6 @@
     <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
     </div>
   </div>
-</div>
   <div class="misfavs">
     <div class="missions">
      <h2>Missions</h2>
@@ -14,29 +13,30 @@
             <p class="go"><%= link_to "Go", mission_path(mission) %></p>
           </div>
         <% end %>
-      </div>
-  <div class="favoris">
-    <h2>Favorites</h2>
-    <%= current_user.fav %>
-    <ul>
-  <%# il faut afficher ici les avatars, noms et infos des devs %>
-    <li>T. Lannister</li>
-    <li>D. Targaryen</li>
-    <li>N. Stark</li>
-    <li>R. Barateno</li>
-    <li>N. Stark</li>
-    </ul>
-  </div>
     </div>
+    <div class="favoris">
+      <h2>Favorites</h2>
+      <%= current_user.fav %>
+      <ul>
+      <%# il faut afficher ici les avatars, noms et infos des devs %>
+      <li>T. Lannister</li>
+      <li>D. Targaryen</li>
+      <li>N. Stark</li>
+      <li>R. Barateno</li>
+      <li>N. Stark</li>
+      </ul>
+    </div>
+  </div>
   <div>
     <h2> History </h2>
     <div class="custom-container">
       <div class="history-comp">
         <div class="hist-elmnt1">
-          <h3>Titre</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Sem viverra aliquet eget sit amet tellus cras
+          <h3>TESLA App</h3>
+          <p>We need to create a cool app to help people
+          to drive their autonomous cars without efforts.
+          This mission need 2 cool devs with rails, HTML, CSS and ruby in terms of
+          languages.
           </p>
         </div>
         <div class="hist-elmnt2">
@@ -78,7 +78,6 @@
       </div>
     </div>
   </div>
-
 </div>
-</div>
-</div>
+<%# </div>
+</div> %>
