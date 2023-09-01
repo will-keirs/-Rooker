@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   resources :matches, only: :show
   # Defines the root path route ("/")
   get "lmatches/:id", to: "missions#lmatch", as: "match_landing"
+  post "lmatches/:id", to: "missions#lmatch_dev_switcher", as: "lmatch_landing_dev_switcher"
   # root "articles#index"
 end

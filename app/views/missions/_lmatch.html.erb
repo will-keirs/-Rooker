@@ -1,0 +1,92 @@
+  <div data-controller="match"
+   data-match-dev-value="<%= @best %>"
+   data-match-mission-id-value="<%= @mission.id %>"
+   class="match-outer-card">
+    <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
+    <div class="big-center">
+      <div class="match-dev-infos">
+        <div class="dev-img">
+          <%= image_tag "image.jpg", style: 'height:300px;width:300px;' %>
+          <div  class="match-buttons" >
+
+            <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {
+                match_target: "form",
+                action: "submit->match#selected"
+              } do |f| %>
+              <%= f.hidden_field :query, value: @best %>
+              <%= f.submit "Select" %>
+            <% end %>
+
+            <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {
+                match_target: "form",
+                action: "submit->match#next"
+              } do |f| %>
+              <%= f.hidden_field :query, value: @best %>
+              <%= f.submit "Next" %>
+            <% end %>
+
+          </div>
+        </div>
+      <div  class="dev-details">
+      <div>
+        <p data-match-target="selection"> </p>
+        <%# <% @thebest = Dev.find(@best) %>
+        <p class=<%= @best >= @last_dev ? "" : "d-none" %>>Vous avez fait le tour</p>
+        <h3 ><%= @dev.name %></h3>
+        <h4><%= @dev.diploma %></h4>
+      </div>
+      <div>
+        <h3><strong>FETCH GITHUB GRAPH HERE</strong></h3>
+      </div>
+      <div >
+        <p class="dev-description">
+           Dev personal description on subscribeDev personal
+           description on subscribeDev personal description on subscribeDev
+           personal description on subscribeDev personal description on subscribe
+        </p>
+      </div>
+      <div class="skill-div">
+        <h4><strong>Languages</strong></h4>
+        <ul>
+          <% @dev.languages.each do |language| %>
+            <li><%= language.langtype%></li>
+            <% end %>
+        </ul>
+      </div>
+      <div class="skill-div">
+        <h4><strong>Soft skills</strong></h4>
+        <ul>
+          <% @dev.soft_skills.each do |sk| %>
+            <li><%= sk.skill%></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="skill-div">
+      <h4><strong>Infos</strong></h4>
+        <p><strong>City:</strong> <%=@dev.location %></p>
+        <p><strong>Area: </strong><%=@dev.area %></p>
+      </div >
+      <div class="button-div" >
+        <button><%= link_to "Reselect", edit_mission_path(@mission) %></button>
+        <button > <%=link_to "Selected profiles", mission_matches_path(@mission)  %></button>
+      </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
+  <div>
+  </div>
+
+    <button><%= link_to 'Back', :back %></button>
+</div>
