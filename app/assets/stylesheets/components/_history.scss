@@ -13,6 +13,7 @@
 
 .hist-elmnt1 {
   width: 30%;
+  padding-right: 10px;
 
    h3 {
     padding-top: -4px;
@@ -23,6 +24,7 @@
 .hist-elmnt2 {
   border-left: 1px solid black;
   width: 30%;
+  padding: 10px;
 }
 
 .soft-elmnt {
@@ -38,7 +40,12 @@
   // align-items: center;
   border-left: 1px solid black;
   width: 15%;
+  padding: 10px;
   padding-left: 20px;
+}
+
+.hist-elmnt3 img {
+  margin: 8px;
 }
 
 .hist-elmnt4 {
