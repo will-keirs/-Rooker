@@ -1,0 +1,36 @@
+.pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pending-nav {
+  display: flex;
+  background-color: grey;
+  width: 80%;
+  height: 70px;
+
+}
+
+.pend-text {
+  flex-grow: 1;
+}
+
+.pend-btn{
+  flex-grow: 2;
+  background-color: black;
+}
+
+.mission-specs {
+  background-color: rgb(187, 187, 187);
+  width: 80%;
+  height: 300px;
+}
+
+.profile-selection {
+  background-color: grey;
+  width: 80%;
+  height: 300px;
+
+}
