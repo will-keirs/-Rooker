@@ -5,36 +5,91 @@
         <h1>Nom de la mission</h1>
       </div>
       <div class="pend-btn">
-        <p>Go to matches</p>
+
+        <a class="my-button" href="">Go to matches</a>
       </div>
       <div class="pend-btn">
-        <p>Go to dashboard</p>
+        <a class="my-button" href="">Go to dashboard</a>
       </div>
     </div>
     <div class="mission-specs">
       <div class="mission-desc">
-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus cras </p>
       </div>
       <div class="mission-datedom">
-
-
-  <div>
-      <% @mission.matches.each do |match| %>
-        <h2><%= match.dev_id %></h2>
-        <p><%= match.comment %></p>
-      <% end %>
-  </div>
-
-    <div class="buttons-matches">
-      <%= link_to "Back to dashboard", user_dashboard_path %>
-      <%= link_to "Back to matches", match_landing_path(@mission) %>
-
+        <div class="mission-date">
+          <h4>Date</h4>
+          <p>from 01/10/2023 to 30/10/2023</p>
+        </div>
+        <div class="mission-dom">
+          <h4>Domaine</h4>
+          <p>Agriculture</p>
+        </div>
+      </div>
+      <div class="mission-langsoft">
+        <div class="mission-lang">
+          <h4>Languages</h4>
+          <div class="lang-logos">
+            <%= image_tag("01HTML.svg", size: "20x20")%>
+            <%= image_tag("02CSS.svg", size: "20x20")%>
+            <%= image_tag("03JS.svg", size: "20x20")%>
+            <%= image_tag("04Ruby.svg", size: "20x20")%>
+          </div>
+        </div>
+        <div class="mission-soft">
+          <h4>Soft skills</h4>
+          <p>Adaptability, Sense of Organization</p>
+        </div>
+      </div>
     </div>
 
     <div class="profile-selection">
       <h3>Your profile selection</h3>
       <div class="my-component">
-
+        <div class="custom-container">
+      <div class="history-comp">
+        <div class="hist-elmnt1">
+          <h3>Titre</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Sem viverra aliquet eget sit amet tellus cras
+          </p>
+        </div>
+        <div class="hist-elmnt2">
+          <div class="soft-elmnt">
+            <h4>Soft skills</h4>
+            <p> Adaptability, Sense of Organization, Rigour </p>
+          </div>
+          <div class="date-elmnt">
+            <h4> Date</h4>
+            <p> 01/10/2023</p>
+          </div>
+        </div>
+        <div class="hist-elmnt3">
+          <div>
+            <h4>Languages</h4>
+          </div>
+          <div>
+            <%= image_tag("01HTML.svg", size: "20x20")%>
+            <%= image_tag("02CSS.svg", size: "20x20")%>
+            <%= image_tag("03JS.svg", size: "20x20")%>
+            <%= image_tag("04Ruby.svg", size: "20x20")%>
+            <%= image_tag("05Rails.svg", size: "20x20")%>
+          </div>
+        </div>
+        <div class="hist-elmnt4">
+          <div>
+            <h4>Devs</h4>
+          </div>
+          <div class="dev-elmnt">
+            <%= image_tag("Anais.jpg", size: "56x56", class: "rounded-circle")%>
+          </div>
+          <div class="rematch">
+            <p>"Go re-match!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
