@@ -9,6 +9,7 @@
             <% sk.input :languages, collection: Language.all %>
           <% end %>
           <%= f.hidden_field :query, value: @best %>
+
           <%= f.button :submit, "Next step"%>
         <% end %>
   </div>

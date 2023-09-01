@@ -4,7 +4,6 @@
     <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
     </div>
   </div>
-</div>
   <div class="misfavs">
     <div class="missions">
      <h2>Missions</h2>
@@ -14,20 +13,20 @@
             <p class="go"><%= link_to "Go", mission_path(mission) %></p>
           </div>
         <% end %>
-      </div>
-  <div class="favoris">
-    <h2>Favorites</h2>
-    <%= current_user.fav %>
-    <ul>
-  <%# il faut afficher ici les avatars, noms et infos des devs %>
-    <li>T. Lannister</li>
-    <li>D. Targaryen</li>
-    <li>N. Stark</li>
-    <li>R. Barateno</li>
-    <li>N. Stark</li>
-    </ul>
-  </div>
     </div>
+    <div class="favoris">
+      <h2>Favorites</h2>
+      <%= current_user.fav %>
+      <ul>
+      <%# il faut afficher ici les avatars, noms et infos des devs %>
+      <li>T. Lannister</li>
+      <li>D. Targaryen</li>
+      <li>N. Stark</li>
+      <li>R. Barateno</li>
+      <li>N. Stark</li>
+      </ul>
+    </div>
+  </div>
   <div>
     <h2> History </h2>
     <div class="custom-container">
@@ -78,7 +77,6 @@
       </div>
     </div>
   </div>
-
 </div>
-</div>
-</div>
+<%# </div>
+</div> %>
