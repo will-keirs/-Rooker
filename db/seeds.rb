@@ -2,8 +2,11 @@ puts "creation m..."
 Devlangmission.destroy_all
 Devsoftmission.destroy_all
 Match.destroy_all
+Dev.destroy_all
 Mission.destroy_all
 User.destroy_all
+SoftSkill.destroy_all
+Language.destroy_all
 
 user1 = User.new(
   email: "lolo@gmail.com",
@@ -103,34 +106,179 @@ dev4 = Dev.new(
   diploma: "Le Wagon 2019"
 )
 dev4.save!
+
+dev5 = Dev.new(
+  name: "Clara",
+  email: "clara@clara.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030405",
+  area: "Healthcare",
+  upvote: 10,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev5.save!
+dev6 = Dev.new(
+  name: "Thomas",
+  email: "thomas@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Energy",
+  upvote: 45,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev6.save!
+dev7 = Dev.new(
+  name: "Lorenzo",
+  email: "thoas@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Graphism",
+  upvote: 12,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev7.save!
+dev8 = Dev.new(
+  name: "Rémy",
+  email: "thoma@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Auto",
+  upvote: 5,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev8.save!
+
+dev9 = Dev.new(
+  name: "Alice",
+  email: "tmas@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Travel",
+  upvote: 22,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev9.save!
+
+dev10 = Dev.new(
+  name: "Adam",
+  email: "ths@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Football",
+  upvote: 14,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev10.save!
+
+dev11 = Dev.new(
+  name: "Anais",
+  email: "ts@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Communication",
+  upvote: 7,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev11.save!
+
+dev12 = Dev.new(
+  name: "Emma",
+  email: "themmaas@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Biology",
+  upvote: 63,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev12.save!
+
+dev13 = Dev.new(
+  name: "Halima",
+  email: "Halima@lucy.com",
+  availability: true,
+  password: "123456",
+  phone: "0102030406",
+  area: "Dance",
+  upvote: 14,
+  location: "Marseille",
+  diploma: "Le Wagon 2023"
+)
+dev13.save!
+
 match = Match.new(
   comment: "Amazing",
-  dev: dev1,
+  dev: dev7,
   mission: mission1,
   accepted: true
 )
 match.save!
 match1 = Match.new(
   comment: "the best ever",
-  dev: dev1,
+  dev: dev8,
   mission: mission1,
   accepted: true
 )
 match1.save!
 match2 = Match.new(
   comment: "nobody moves like this",
-  dev: dev1,
+  dev: dev9,
   mission: mission1,
   accepted: true
 )
 match2.save!
 match3 = Match.new(
   comment: "perfecto",
-  dev: dev1,
+  dev: dev10,
   mission: mission1,
   accepted: true
 )
 match3.save!
+
+match4 = Match.new(
+  comment: "Amazing",
+  dev: dev4,
+  mission: mission1,
+  accepted: true
+)
+match4.save!
+match5 = Match.new(
+  comment: "the best ever",
+  dev: dev5,
+  mission: mission1,
+  accepted: true
+)
+match5.save!
+match6 = Match.new(
+  comment: "nobody moves like this",
+  dev: dev6,
+  mission: mission1,
+  accepted: true
+)
+match6.save!
+match7 = Match.new(
+  comment: "perfecto",
+  dev: dev11,
+  mission: mission1,
+  accepted: true
+)
+match7.save!
+
 l = Language.create!(langtype: "Ruby")
 l1 = Language.create!(langtype: "PHP")
 l2 = Language.create!(langtype: "Python")
@@ -177,6 +325,25 @@ Devlangmission.create!(dev: dev2, language: l2, mission: mission2)
 Devlangmission.create!(dev: dev3, language: l3, mission: mission2)
 Devlangmission.create!(dev: dev4, language: l, mission: mission1)
 
+Devlangmission.create!(dev: dev5, language: l2, mission: mission1)
+Devlangmission.create!(dev: dev6, language: l3, mission: mission2)
+Devlangmission.create!(dev: dev7, language: l4, mission: mission2)
+Devlangmission.create!(dev: dev8, language: l, mission: mission1)
+Devlangmission.create!(dev: dev9, language: l5, mission: mission1)
+Devlangmission.create!(dev: dev10, language: l5, mission: mission2)
+Devlangmission.create!(dev: dev11, language: l6, mission: mission2)
+Devlangmission.create!(dev: dev12, language: l7, mission: mission1)
+Devlangmission.create!(dev: dev13, language: l8, mission: mission1)
+Devlangmission.create!(dev: dev5, language: l9, mission: mission2)
+Devlangmission.create!(dev: dev6, language: l10, mission: mission2)
+Devlangmission.create!(dev: dev7, language: l4, mission: mission1)
+Devlangmission.create!(dev: dev8, language: l2, mission: mission1)
+Devlangmission.create!(dev: dev9, language: l7, mission: mission2)
+Devlangmission.create!(dev: dev10, language: l1, mission: mission1)
+Devlangmission.create!(dev: dev11, language: l2, mission: mission2)
+Devlangmission.create!(dev: dev12, language: l3, mission: mission2)
+Devlangmission.create!(dev: dev13, language: l, mission: mission1)
+
 
 Devsoftmission.create!(dev: dev1, soft_skill: sk1, mission: mission1)
 Devsoftmission.create!(dev: dev2, soft_skill: sk2, mission: mission1)
@@ -207,3 +374,30 @@ Devsoftmission.create!(dev: dev2, soft_skill: sk12, mission: mission1)
 Devsoftmission.create!(dev: dev3, soft_skill: sk13, mission: mission2)
 Devsoftmission.create!(dev: dev4, soft_skill: sk, mission: mission2)
 
+Devsoftmission.create!(dev: dev5, soft_skill: sk1, mission: mission1)
+Devsoftmission.create!(dev: dev6, soft_skill: sk2, mission: mission1)
+Devsoftmission.create!(dev: dev7, soft_skill: sk3, mission: mission2)
+Devsoftmission.create!(dev: dev8, soft_skill: sk4, mission: mission2)
+Devsoftmission.create!(dev: dev9, soft_skill: sk, mission: mission1)
+Devsoftmission.create!(dev: dev10, soft_skill: sk5, mission: mission1)
+Devsoftmission.create!(dev: dev11, soft_skill: sk6, mission: mission2)
+Devsoftmission.create!(dev: dev12, soft_skill: sk7, mission: mission2)
+Devsoftmission.create!(dev: dev13, soft_skill: sk8, mission: mission1)
+Devsoftmission.create!(dev: dev5, soft_skill: sk2, mission: mission1)
+Devsoftmission.create!(dev: dev6, soft_skill: sk3, mission: mission1)
+Devsoftmission.create!(dev: dev7, soft_skill: sk4, mission: mission2)
+Devsoftmission.create!(dev: dev8, soft_skill: sk5, mission: mission2)
+Devsoftmission.create!(dev: dev9, soft_skill: sk6, mission: mission1)
+Devsoftmission.create!(dev: dev10, soft_skill: sk7, mission: mission1)
+Devsoftmission.create!(dev: dev11, soft_skill: sk8, mission: mission2)
+Devsoftmission.create!(dev: dev12, soft_skill: sk2, mission: mission2)
+Devsoftmission.create!(dev: dev13, soft_skill: sk9, mission: mission1)
+Devsoftmission.create!(dev: dev5, soft_skill: sk3, mission: mission1)
+Devsoftmission.create!(dev: dev6, soft_skill: sk5, mission: mission1)
+Devsoftmission.create!(dev: dev7, soft_skill: sk9, mission: mission2)
+Devsoftmission.create!(dev: dev8, soft_skill: sk10, mission: mission2)
+Devsoftmission.create!(dev: dev9, soft_skill: sk3, mission: mission1)
+Devsoftmission.create!(dev: dev10, soft_skill: sk, mission: mission1)
+Devsoftmission.create!(dev: dev11, soft_skill: sk3, mission: mission2)
+Devsoftmission.create!(dev: dev12, soft_skill: sk10, mission: mission2)
+Devsoftmission.create!(dev: dev13, soft_skill: sk4, mission: mission1)

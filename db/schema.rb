@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_01_154713) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.integer "upvote"
     t.string "location"
     t.string "diploma"
+    t.integer "score"
   end
 
   create_table "devsoftmissions", force: :cascade do |t|
@@ -73,6 +74,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.bigint "mission_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score"
     t.index ["dev_id"], name: "index_matches_on_dev_id"
     t.index ["mission_id"], name: "index_matches_on_mission_id"
   end

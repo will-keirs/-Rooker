@@ -5,8 +5,8 @@
     <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
     <div class="big-center">
       <div class="match-dev-infos">
-        <div class="dev-img">
-          <%= image_tag "image.jpg", style: 'height:300px;width:300px;' %>
+        <div class="dev-img"  >
+          <%= image_tag "rooker.png", style: 'height:300px;width:300px;', data: { target: 'match.next' }%>
           <div  class="match-buttons" >
 
             <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {

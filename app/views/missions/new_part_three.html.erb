@@ -7,7 +7,7 @@
       <h2>What Soft skills do you need ?</h2>
         <%= simple_form_for @mission do |f| %>
             <%= simple_fields_for :languages do |l| %>
-              <% l.input :langtype, collection: SoftSkill.all %>
+              <% l.input :langtype, collection: SoftSkill.pluck(:skill) %>
             <% end %>
 
           <%= f.hidden_field :query, value: @best %>
