@@ -1,50 +1,9 @@
 <div class="Container">
   <div class="pending">
-      <div class="pending-nav">
-        <div class="pend-text">
-          <h1><%= @mission.name %></h1>
-        </div>
-        <div class="pend-btn">
-
-          <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
-        </div>
-        <div class="pend-btn">
-          <a class="my-button" href=""><%= link_to "Dashboard", user_dashboard_path(@dashboard) %></a>
-        </div>
-      </div>
-      <div class="mission-specs">
-        <div class="mission-desc">
-          <p><%= @mission.description %> </p>
-        </div>
-        <div class="mission-datedom">
-          <div class="mission-date">
-            <h4>Date</h4>
-            <p>from : <%= @mission.start_date %> to : <%= @mission.end_date %></p>
-          </div>
-          <div class="mission-dom">
-            <h4>Area</h4>
-            <p><%= @mission.area %></p>
-          </div>
-        </div>
-        <div class="mission-langsoft">
-          <div class="mission-lang">
-            <h4>Languages</h4>
-            <div class="lang-logos">
-              <%= image_tag("01HTML.svg", size: "20x20")%>
-              <%= image_tag("02CSS.svg", size: "20x20")%>
-              <%= image_tag("03JS.svg", size: "20x20")%>
-              <%= image_tag("04Ruby.svg", size: "20x20")%>
-            </div>
-          </div>
-          <div class="mission-soft">
-            <h4>Soft skills</h4>
-            <p></p>
-          </div>
-        </div>
-      </div>
+      <%= render "matches/partials/pending_mission", locals: {match: @matches, mission: @mission} %>
       <div class="profile-selection">
         <h3>Your profile selection</h3>
-          <%= render "matching_dev", locals: {match: @matches, mission: @mission} %>
+          <%= render "matches/partials/matching_dev", locals: {match: @matches, mission: @mission} %>
       </div>
    </div>
 </div>
