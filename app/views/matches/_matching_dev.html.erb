@@ -1,0 +1,37 @@
+<div class="dev-outer-card">
+  <% @matches.each do |match| %>
+    <div class="dev-inner-card">
+        <div class="dev-inner-card-image">
+          <%= image_tag("Anais.jpg", size: "150*150", class: "rounded-circle") %>
+        </div>
+        <div class="dev-inner-card-col">
+            <h5><strong>Infos:</strong></h5>
+            <h5><strong><%= match.dev.name %></strong></h5>
+            <p><%= match.dev.diploma %></p>
+            <p><%= match.dev.location %></p>
+        </div>
+        <div class="dev-inner-card-col">
+              <h5><strong>Languages:</strong></h5>
+          <% match.dev.languages.first(3).each do |l| %>
+            <ul>
+              <li><%= l.langtype %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="dev-inner-card-col soft">
+         <h5><strong>Soft skills:</strong></h6>
+          <% match.dev.soft_skills.first(3).each do |sk| %>
+            <ul>
+              <li><%= sk.skill %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="dev-inner-card-col">
+          <h5><strong>Contact</strong></h5>
+        </div>
+        <div class="dev-inner-card-col">
+          <h5><strong>Bell icon</strong></h5>
+        </div>
+    </div>
+  <% end %>
+</div>

@@ -6,7 +6,7 @@
       <h2>What languages do you need ?</h2>
         <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
           <%= simple_fields_for :languages do |sk| %>
-            <% sk.input :languages, collection: Language.all %>
+            <% sk.input :languages, collection: Language.pluck(:langtype) %>
           <% end %>
           <%= f.hidden_field :query, value: @best %>
 
