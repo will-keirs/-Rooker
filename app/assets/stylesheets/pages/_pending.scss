@@ -6,6 +6,9 @@
   padding: 10px;
 }
 
+.megatitle {
+  color: white;
+}
 .Container {
   min-height: calc(100vh - 100px);
   overflow-y: auto;
@@ -14,7 +17,6 @@
   display: flex;
   background-color: grey;
   width: 80%;
-  height: 70px;
   padding: 10px;
 }
 
@@ -24,9 +26,19 @@
 }
 
 .pend-btn{
+  border: 1px solid rgb(40, 40, 40);
   flex-grow: 2;
   background-color: black;
   padding: 2px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+}
+.pend-btn:hover{
+  opacity: 85%;
+  font-weight: bolder;
 }
 
 .mission-specs {
