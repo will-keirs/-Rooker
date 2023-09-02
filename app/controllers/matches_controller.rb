@@ -8,6 +8,7 @@ class MatchesController < ApplicationController
     @match = Match.find(params[:id])
     @mission = @match.mission
     @matches = @mission.matches
+    @dev = @match.dev
   end
 
   def new

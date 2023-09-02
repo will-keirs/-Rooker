@@ -1,0 +1,158 @@
+.dev-profile{
+ background-color: white;
+ width: 90%;
+ justify-content: center;
+ margin-left: 100px;
+ margin-right: 100px;
+ margin-top: 50px;
+}
+
+.dev-header{
+background-color: rgb(234, 234, 234);
+display: flex;
+}
+
+.dev-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dev-links-icons{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+    i{
+      color: black;
+    }
+
+}
+
+.dev-upvote{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: flex-end;
+  img{
+    margin-left: 30px;
+  }
+  h4{
+    margin-top: 10px;
+  }
+}
+
+.dev-avatar{
+  background-color: rgb(213, 213, 213);
+
+  padding: 10px;
+    img{
+      border: 1px solid rgb(213, 213, 213);
+    }
+}
+
+.dev-description {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.dev-infos {
+  padding: 30px;
+  background-color: rgb(177, 177, 177);
+}
+
+.dev-infos h1{
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  margin: 5px;
+}
+
+.dev-my-comment{
+  background-color: rgb(160, 160, 160);
+  padding: 10px;
+  padding-top: 50px;
+}
+
+.dev-missions{
+  display: flex;
+  flex-direction: column;
+    h2{
+      margin: 20px;
+    }
+}
+.dev-missions-it{
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  li {
+    list-style-type: none;
+    margin: 10px;
+  }
+}
+
+.dev-body{
+  display: flex;
+  justify-content: space-evenly;
+  column-count: 2;
+  background-color: rgb(137, 137, 137);
+}
+
+.dev-langs-container {
+  display: flex;
+  flex-direction: column;
+  h2{
+    padding: 10px;
+  }
+}
+
+.dev-langs{
+  padding: 10px;
+}
+
+.dev-softs-container {
+  display: flex;
+  flex-direction: column;
+  h2{
+    padding: 10px;
+  }
+}
+.dev-softs {
+  padding: 10px;
+  column-count: 2;
+}
+.dev-contact{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(126, 126, 126);
+  justify-content: space-evenly;
+  .pin{
+    border: 1px solid rgb(81, 81, 81);
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
+
+.dev-contact image_tag
+
+.avail-chat {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dev-mail{
+  padding: 10px;
+
+}
+
+.ring-a-bell{
+  padding: 10px;
+
+}
