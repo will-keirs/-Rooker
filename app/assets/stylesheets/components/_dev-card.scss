@@ -1,4 +1,4 @@
-/* Ajoutez ces styles à votre feuille de style CSS */
+
 .dev-outer-card {
   justify-content: center;
   display: flex;
@@ -27,7 +27,6 @@
   flex-direction: row;
 }
 
-/* Vous pouvez également spécifier les styles pour chaque div à l'intérieur de "dev-inner-card" */
 .dev-inner-card-col {
   padding: 30px;
   justify-content: center;
@@ -38,4 +37,35 @@
  margin-bottom: 10px;
 }
 
-/* Les éléments à l'intérieur de "dev-inner-card" seront affichés côte à côte horizontalement */
+.dev-inner-card-chat{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  img{
+    margin-left: 15px;
+  }
+}
+
+.dev-inner-card-vote {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-top: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.glow:hover{
+  color: rgba(255, 255, 255, 1);
+  opacity: 90%;
+}
+
+.center-availability {
+  padding-left: 10px;
+}
