@@ -2,11 +2,11 @@
   <% @matches.each do |match| %>
     <div class="dev-inner-card">
         <div class="dev-inner-card-image">
-          <%= image_tag("Anais.jpg", size: "150*150", class: "rounded-circle") %>
+          <%= link_to image_tag("Anais.jpg", size: "150*150", class: "rounded-circle"), match_path(match) %>
         </div>
         <div class="dev-inner-card-col">
             <h5><strong>Infos:</strong></h5>
-            <h5><strong><%= match.dev.name %></strong></h5>
+            <h5><strong><%= link_to match.dev.name, match_path(match) %></strong></h5>
             <p><%= match.dev.diploma %></p>
             <p><%= match.dev.location %></p>
         </div>
