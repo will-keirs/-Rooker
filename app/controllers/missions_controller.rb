@@ -66,22 +66,32 @@ class MissionsController < ApplicationController
     @devs = Dev.all
     @last_dev = Dev.last.id + 1
     @matchable_devs = []
+    @devs.each do |dev|
+      @matchable_devs << dev.id
+    end
     @dev_score = Dev.first
-    fake_dev_array = Dev.ids
-    @best = fake_dev_array.first
-    @dev = Dev.find(@best)
+    @best = @matchable_devs.first
+    @best_index = 0
+    @dev = Dev.find(@matchable_devs[@best_index])
   end
 
 
   def lmatch_dev_switcher
+    @devall = Dev.all
     @mission = Mission.find(params[:id])
     @last_dev = (Dev.last.id + 1)
+    @best_index = 0
+    @matchable_devs = []
+    @devall.each do |dev|
+      @matchable_devs << dev.id
+    end
     if params[:query].present?
       dev_id = (params[:query].to_i)
       @best = 0
       @best = dev_id += 1
       if @best == @last_dev
-        (@best = Dev.first.id)
+          (@best = Dev.first.id)
+          (@best_index = 0)
       end
       @dev = Dev.find(@best)
     end
@@ -115,4 +125,5 @@ class MissionsController < ApplicationController
      @matchable_devs.order_by(dev.score)         # (A REFAIRE FAUX) je classe mon array par Dev.points
     @best = @matchable_devs[0]                  # j'assigne le dev ayant le plus de points a une variable d'instance pour pouvoir le rappeler sur ma view
   end
+
 end

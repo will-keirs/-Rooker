@@ -67,6 +67,15 @@
   font-size: 12px;
 }
 
+.superpose {
+  position: relative;
+}
+
+.superpose_child {
+position: absolute;
+z-index: 1;
+}
+
 // @dev.languages.includes?(@mission.languages)
 //   dev +3pts => la raie => laraie.order
 //   1

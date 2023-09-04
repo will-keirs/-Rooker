@@ -5,6 +5,7 @@ export default class extends Controller {
 
    static targets = ["selection", "form", "container"]
    static values = {
+    index: Number,
     missionId: Number,
     dev: Number
  }

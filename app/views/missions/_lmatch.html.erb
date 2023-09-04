@@ -1,11 +1,21 @@
   <div data-controller="match"
    data-match-dev-value="<%= @best %>"
+   data-match-index-value="<%= @best_index %>"
    data-match-mission-id-value="<%= @mission.id %>"
    class="match-outer-card">
     <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
     <div class="big-center">
       <div class="match-dev-infos">
+      <p><%= @best %></p>
+      <p><%= @best_index %></p>
+      <p><%= @dev %></p>
+      <p><%= @matchable_dev %></p>
         <div class="dev-img"  >
+           <div class="superpose">
+              <div class="superpose_child">
+                 <p class=<%= @best >= @last_dev - 1 ? "" : "d-none" %> >Vous avez fait le tour</p>
+              </div>
+            </div>
           <%= image_tag @dev.photo , style: 'height:300px;width:300px;', data: { target: 'match.next' }%>
           <div  class="match-buttons" >
 
@@ -17,21 +27,20 @@
               <%= f.submit "Select" %>
             <% end %>
 
+
             <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {
-                match_target: "form",
+              match_target: "form",
                 action: "submit->match#next"
               } do |f| %>
               <%= f.hidden_field :query, value: @best %>
               <%= f.submit "Next" %>
             <% end %>
-
           </div>
         </div>
       <div  class="dev-details">
-      <div>
+      <div >
         <p data-match-target="selection"> </p>
         <%# <% @thebest = Dev.find(@best) %>
-        <p class=<%= @best >= @last_dev ? "" : "d-none" %>>Vous avez fait le tour</p>
         <h3 ><%= @dev.name %></h3>
         <h4><%= @dev.diploma %></h4>
       </div>
