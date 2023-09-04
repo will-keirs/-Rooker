@@ -7,30 +7,88 @@
 
 .pending-nav {
   display: flex;
-  background-color: grey;
   width: 80%;
-  height: 70px;
-
+  height: 60px;
+  justify-content: space-between;
 }
 
 .pend-text {
-  flex-grow: 1;
+  width: 500px;
 }
 
 .pend-btn{
-  flex-grow: 2;
+  width: 235px;
+  // padding: 15px;
   background-color: black;
 }
 
+.my-button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+}
+
 .mission-specs {
-  background-color: rgb(187, 187, 187);
+  display: flex;
+  background-color:#D9D9D9;
   width: 80%;
-  height: 300px;
+  height: 200px;
+  padding: 20px;
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.mission-desc {
+  width: 40%;
+  padding: 0px 20px;
+}
+
+.mission-datedom {
+
+  width: 30%;
+  border-left: 1px solid black;
+}
+
+.mission-date {
+  padding-left: 20px;
+}
+
+.mission-dom {
+  padding-left: 20px;
+}
+
+.mission-langsoft{
+  width: 30%;
+  border-left: 1px solid black;
+}
+
+.mission-lang {
+  padding-left: 20px;
+}
+
+.lang-logos{
+  margin-bottom: 8px;
+}
+
+.mission-soft{
+  padding-left: 20px;
 }
 
 .profile-selection {
-  background-color: grey;
+  background-color: #EBEBEB;
   width: 80%;
   height: 300px;
+  padding: 20px;
 
+  h3 {
+    padding-bottom: 20px;
+  }
 }

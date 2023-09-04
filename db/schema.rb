@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,20 +25,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.index ["mission_id"], name: "index_devlangmissions_on_mission_id"
   end
 
-  create_table "devmissionlangs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "devmissionsofts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "devs", force: :cascade do |t|
+    t.integer "language"
     t.boolean "availability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "diploma"
     t.string "name"
     t.string "email"
     t.string "password"
@@ -46,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.string "area"
     t.integer "upvote"
     t.string "location"
-    t.string "diploma"
   end
 
   create_table "devsoftmissions", force: :cascade do |t|
@@ -64,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_053917) do
     t.string "langtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "langicon"
   end
 
   create_table "matches", force: :cascade do |t|
