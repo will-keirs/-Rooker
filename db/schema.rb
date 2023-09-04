@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_02_224331) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_04_085909) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devlangmissions", force: :cascade do |t|
-    t.bigint "dev_id", null: false
-    t.bigint "mission_id", null: false
+    t.integer "dev_id"
+    t.integer "mission_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "language_id", null: false
@@ -55,11 +55,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_02_224331) do
     t.string "website_link"
     t.string "twitter_link"
     t.string "facebook_link"
+    t.string "insta_link"
   end
 
   create_table "devsoftmissions", force: :cascade do |t|
-    t.bigint "dev_id", null: false
-    t.bigint "mission_id", null: false
+    t.integer "dev_id"
+    t.integer "mission_id"
     t.bigint "soft_skill_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -72,6 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_02_224331) do
     t.string "langtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
   end
 
   create_table "matches", force: :cascade do |t|

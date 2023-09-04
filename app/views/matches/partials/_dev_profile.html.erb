@@ -24,7 +24,6 @@
           <h4><strong><%= @dev.upvote %></strong></h4>
           <%= image_tag("upvote.png", class: "glow", size: "40*40") %>
       </div>
-    <%# name , diploma , description(flat) , reseaux , upvote%>
     </div>
     <div class="dev-my-comment">
       <h4><strong>Your comment:</strong></h4>
@@ -52,7 +51,7 @@
 
           <% @dev.languages.each do |l| %>
               <ul>
-                <li><%= l.langtype %></li>
+                <li><%= image_tag( l.icon, size: "30*30") %></li>
               </ul>
             <% end %>
           </div>
