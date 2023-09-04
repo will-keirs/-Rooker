@@ -21,6 +21,7 @@ user1 = User.new(
 )
 user1.save!
 
+
 user2 = User.new(
   email: "lele@gmail.com",
   password: "123456",
@@ -76,7 +77,6 @@ dev1 = Dev.new(
   twitter_link: "https://lorenzolara.myportfolio.com/",
   facebook_link: "https://lorenzolara.myportfolio.com/",
   instagram_link: "https://lorenzolara.myportfolio.com/"
-
 )
 dev1.save!
 dev2 = Dev.new(
