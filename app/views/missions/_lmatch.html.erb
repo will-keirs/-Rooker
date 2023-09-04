@@ -8,8 +8,7 @@
       <div class="match-dev-infos">
       <p><%= @best %></p>
       <p><%= @best_index %></p>
-      <p><%= @dev %></p>
-      <p><%= @matchable_dev %></p>
+
         <div class="dev-img"  >
            <div class="superpose">
               <div class="superpose_child">
@@ -24,8 +23,10 @@
                 action: "submit->match#selected"
               } do |f| %>
               <%= f.hidden_field :query, value: @best %>
+              <%= f.hidden_field :selected_dev_id, value: @dev.id %>
               <%= f.submit "Select" %>
             <% end %>
+            <%= console %>
 
 
             <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {

@@ -77,24 +77,44 @@ class MissionsController < ApplicationController
 
 
   def lmatch_dev_switcher
-    @devall = Dev.all
+    # @devalll = Dev.all
+    # @devalll.each do |dev|
+    #   @matchable_devs << dev.id
+    # end
+    # <<<<< Remplacer par @devall =  Dev.all.map(&:id)
     @mission = Mission.find(params[:id])
+
+    @available_dev_ids = Dev.all.map(&:id).uniq
+    @devall_selected_ids = Dev.joins(:matches).where(matches: {mission: @mission})
+
+    unless @devall_selected_ids.empty?
+      @available_dev_ids = @available_dev_ids - @devall_selected_ids
+    end
+
+    if params[:selected_dev_id].present?
+      @devall_selected_ids = @devall_selected_ids.map(&:id).uniq
+      @available_dev_ids = @available_dev_ids - @devall_selected_ids
+      @available_dev_ids
+    end
+
     @last_dev = (Dev.last.id + 1)
     @best_index = 0
     @matchable_devs = []
-    @devall.each do |dev|
-      @matchable_devs << dev.id
-    end
+
     if params[:query].present?
+
       dev_id = (params[:query].to_i)
       @best = 0
       @best = dev_id += 1
+      @best_index = @best_index +=1
+
       if @best == @last_dev
-          (@best = Dev.first.id)
-          (@best_index = 0)
+        (@best = Dev.first.id)
+        (@best_index = 0)
       end
-      @dev = Dev.find(@best)
+      @dev = Dev.find(@available_dev_ids[@best_index])
     end
+
     respond_to do |format|
       format.text { render partial: "missions/lmatch", locals: {dev: @dev, mission: @mission}, formats: [:html] }
     end
