@@ -25,20 +25,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_01_154713) do
     t.index ["mission_id"], name: "index_devlangmissions_on_mission_id"
   end
 
-  create_table "devmissionlangs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "devmissionsofts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "devs", force: :cascade do |t|
+    t.integer "language"
     t.boolean "availability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "diploma"
     t.string "name"
     t.string "email"
     t.string "password"
@@ -46,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_01_154713) do
     t.string "area"
     t.integer "upvote"
     t.string "location"
-    t.string "diploma"
     t.integer "score"
   end
 
