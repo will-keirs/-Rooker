@@ -1,1 +1,23 @@
-<h1>coucou show mission</h1>
+
+<h1>Mission : <%= @mission.name %></h1>
+<div class="container">
+  <p>Description: <%= @mission.description %></p>
+  <p>Area: <%= @mission.area %></p>
+  <p>From: <%= @mission.start_date %> to : <%= @mission.end_date %></p>
+  <p>Budget: <%= @mission.price %>€</p>
+  <p>Languages: <% @mission.languages.last(3).each do |lang| %>
+  <%= lang.langtype %> </p>
+  <% end %>
+  <p>Soft skills: <% @mission.soft_skills.last(3).each do |sk| %>
+  <%= sk.skill %> </p>
+  <% end %>
+  <p>Devs: <% @mission.matches.each do |match| %>
+  <%= match.dev.name %></p>
+  <% end %>
+</div>
+<div class="pend-btn">
+          <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
+        </div>
+        <div class="pend-btn">
+          <a class="my-button" href=""><%= link_to "Dashboard", user_dashboard_path(@dashboard) %></a>
+        </div>
