@@ -1,6 +1,6 @@
   <div class="dev-header">
     <div class="dev-avatar">
-       <%= image_tag("Thomas.jpg", size: "450*450", class: "rounded-circle") %>
+       <%= image_tag( @dev.photo, size: "450*450", class: "rounded-circle") %>
     <%# image %>
     </div>
     <div class="dev-infos">
@@ -9,18 +9,16 @@
       <div class="dev-links">
         <h4><strong>Links</strong></h4>
           <div class="dev-links-icons">
-              <a href="#"><i class="fab fa-github glow fa-3x"></i></a>
-              <a href="#"><i class="fab fa-instagram glow fa-3x"></i></a>
-              <a href="#"><i class="fab fa-facebook glow fa-3x"></i></a>
-              <a href="#"><i class="fab fa-twitter glow fa-3x"></i></a>
-              <a href="#"><i class="fab fa-linkedin glow fa-3x"></i></a>
+              <a href= "<%= @dev.github_link %>" ><i class="fab fa-github glow fa-3x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-instagram glow fa-3x"></i></a>
+              <a href= "<%= @dev.website_link %>"><i class="fab fa-facebook glow fa-3x"></i></a>
+              <a href= "<%= @dev.twitter_link %>"><i class="fab fa-twitter glow fa-3x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-linkedin glow fa-3x"></i></a>
            </div>
       </div>
       <div class="dev-description">
         <h4><strong>Description</strong></h4>
-        <p>"Originally confirmed Graphist from Mexico, I decided to change my life
-        with code learning . I love spicy food which is hard to find in France
-        though. I'm a though learner and I'll do everything I can to reach my goal"</p>
+        <p><%= @dev.description %></p>
       </div>
       <div class="dev-upvote">
           <h4><strong><%= @dev.upvote %></strong></h4>
@@ -31,7 +29,7 @@
     <div class="dev-my-comment">
       <h4><strong>Your comment:</strong></h4>
       <% if @match.comment.present? %>
-         <p><%= @match.comment %>Worked with him on Danone Project, he did the work</p>
+         <p><%= @match.comment %></p>
       <% else %>
          <p>You didn't write a note yet</p>
          <button>Add Note</button>

@@ -6,7 +6,7 @@
     <div class="big-center">
       <div class="match-dev-infos">
         <div class="dev-img"  >
-          <%= image_tag "rooker.png", style: 'height:300px;width:300px;', data: { target: 'match.next' }%>
+          <%= image_tag @dev.photo , style: 'height:300px;width:300px;', data: { target: 'match.next' }%>
           <div  class="match-buttons" >
 
             <%= form_with url: lmatch_landing_dev_switcher_path(@mission.id), data: {
@@ -36,13 +36,18 @@
         <h4><%= @dev.diploma %></h4>
       </div>
       <div>
-        <h3><strong>FETCH GITHUB GRAPH HERE</strong></h3>
+        <h4><strong>Links</strong></h4>
+           <div class="dev-links-icons">
+              <a href= "<%= @dev.github_link %>" ><i class="fab fa-github glow fa-3x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-instagram glow fa-3x"></i></a>
+              <a href= "<%= @dev.website_link %>"><i class="fab fa-facebook glow fa-3x"></i></a>
+              <a href= "<%= @dev.twitter_link %>"><i class="fab fa-twitter glow fa-3x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-linkedin glow fa-3x"></i></a>
+           </div>
       </div>
       <div >
         <p class="dev-description">
-           Dev personal description on subscribeDev personal
-           description on subscribeDev personal description on subscribeDev
-           personal description on subscribeDev personal description on subscribe
+           <%= @dev.description %>
         </p>
       </div>
       <div class="skill-div">

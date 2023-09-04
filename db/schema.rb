@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_01_154713) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_02_224331) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,6 +48,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_01_154713) do
     t.string "location"
     t.string "diploma"
     t.integer "score"
+    t.string "photo"
+    t.text "description"
+    t.string "github_link"
+    t.string "linkedin_link"
+    t.string "website_link"
+    t.string "twitter_link"
+    t.string "facebook_link"
   end
 
   create_table "devsoftmissions", force: :cascade do |t|

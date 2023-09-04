@@ -5,11 +5,13 @@
  margin-left: 100px;
  margin-right: 100px;
  margin-top: 50px;
+ flex: 1;
 }
 
 .dev-header{
 background-color: rgb(234, 234, 234);
 display: flex;
+
 }
 
 .dev-links {
@@ -61,6 +63,7 @@ display: flex;
 .dev-infos {
   padding: 30px;
   background-color: rgb(177, 177, 177);
+  flex-grow: 2;
 }
 
 .dev-infos h1{
@@ -74,6 +77,7 @@ display: flex;
   background-color: rgb(160, 160, 160);
   padding: 10px;
   padding-top: 50px;
+  flex-grow: 1.5;
 }
 
 .dev-missions{
