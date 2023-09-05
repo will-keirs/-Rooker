@@ -26,16 +26,18 @@
         <div class="mission-langsoft">
           <div class="mission-lang">
             <h4>Languages</h4>
+
             <div class="lang-logos">
-              <%= image_tag("01HTML.svg", size: "20x20")%>
-              <%= image_tag("02CSS.svg", size: "20x20")%>
-              <%= image_tag("03JS.svg", size: "20x20")%>
-              <%= image_tag("04Ruby.svg", size: "20x20")%>
+             <% @mission.languages.each do |language| %>
+            <%= image_tag(language.langicon, size: "30x30")%>
+            <% end %>
             </div>
           </div>
           <div class="mission-soft">
             <h4>Soft skills</h4>
-            <p></p>
+            <% @mission.soft_skills.last(2).each do |soft_skill| %>
+            <p><%= soft_skill.skill %> </p>
+            <% end %>
           </div>
         </div>
       </div>
