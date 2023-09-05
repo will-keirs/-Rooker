@@ -8,6 +8,7 @@ User.destroy_all
 SoftSkill.destroy_all
 Language.destroy_all
 
+
 user1 = User.new(
   email: "lolo@gmail.com",
   password: "123456",
@@ -20,8 +21,6 @@ user1 = User.new(
   fav: "Excellent worker"
 )
 user1.save!
-
-
 user2 = User.new(
   email: "lele@gmail.com",
   password: "123456",
@@ -34,7 +33,6 @@ user2 = User.new(
   fav: "Amazingly done !"
 )
 user2.save!
-
 mission1 = Mission.new(
   name: "Projet Danone",
   area: "food",
@@ -46,7 +44,6 @@ mission1 = Mission.new(
   user: user1
 )
 mission1.save!
-
 mission2 = Mission.new(
   name: "Projet Tesla",
   area: "automotive",
@@ -58,7 +55,6 @@ mission2 = Mission.new(
   user: user2
 )
 mission2.save!
-
 dev1 = Dev.new(
   name: "Antoine",
   email: "johnny@johnny.com",
@@ -221,7 +217,6 @@ dev8 = Dev.new(
   instagram_link: "https://lorenzolara.myportfolio.com/"
 )
 dev8.save!
-
 dev9 = Dev.new(
   name: "Alice",
   email: "tmas@lucy.com",
@@ -312,6 +307,7 @@ dev13 = Dev.new(
   name: "Halima",
   email: "Halima@lucy.com",
   availability: false,
+
   password: "123456",
   phone: "0102030406",
   area: "Dance",
@@ -329,7 +325,6 @@ dev13 = Dev.new(
   instagram_link: "https://lorenzolara.myportfolio.com/"
 )
 dev13.save!
-
 match = Match.new(
   comment: "Amazing",
   dev: dev7,
@@ -434,6 +429,7 @@ l7 = Language.create!(langtype: "React", icon: "https://cdn-icons-png.flaticon.c
 l8 = Language.create!(langtype: "MySQL", icon: "https://cdn.icon-icons.com/icons2/2699/PNG/512/mysql_logo_icon_169941.png")
 l9 = Language.create!(langtype: "C++", icon: "https://e7.pngegg.com/pngimages/46/626/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template.png")
 l10 = Language.create!(langtype: "C", icon: "https://www.clipartmax.com/png/middle/240-2409409_c-programming-icon-c-programming-language-icon.png")
+
 
 sk = SoftSkill.create!(skill: "Adaptability")
 sk1 = SoftSkill.create!(skill: "Stress management")

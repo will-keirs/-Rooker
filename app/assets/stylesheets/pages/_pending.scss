@@ -15,7 +15,6 @@
 }
 .pending-nav {
   display: flex;
-  background-color: grey;
   width: 80%;
   padding: 10px;
 }
@@ -41,13 +40,20 @@
   font-weight: bolder;
 }
 
-.mission-specs {
-  background-color: rgb(187, 187, 187);
-  width: 80%;
+.my-button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+}
+
+
   padding: 10px;
 }
 
 .profile-selection {
   width: 80%;
   height: 100%;
+
 }

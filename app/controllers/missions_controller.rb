@@ -9,6 +9,7 @@ class MissionsController < ApplicationController
 
   def new
     @mission = Mission.new
+    # @mission_encours = Mission.find(params[:id])
     @dev = Dev.last
   end
 
@@ -24,6 +25,7 @@ class MissionsController < ApplicationController
 
   def new_part_two
     @mission = Mission.find(params[:id])
+    @languages = Language.all
     @langs = Language.all
   end
 
@@ -38,6 +40,7 @@ class MissionsController < ApplicationController
 
   def new_part_three
     @mission = Mission.find(params[:id])
+    @skills = SoftSkill.all
   end
 
   def form_update_step_three
