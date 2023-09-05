@@ -1,20 +1,39 @@
 
 <h1>Mission : <%= @mission.name %></h1>
-<div class="container">
-  <p>Description: <%= @mission.description %></p>
-  <p>Area: <%= @mission.area %></p>
-  <p>From: <%= @mission.start_date %> to : <%= @mission.end_date %></p>
-  <p>Budget: <%= @mission.price %>€</p>
-  <p>Languages: <% @mission.languages.last(3).each do |lang| %>
-  <%= lang.langtype %> </p>
-  <% end %>
-  <p>Soft skills: <% @mission.soft_skills.last(3).each do |sk| %>
-  <%= sk.skill %> </p>
-  <% end %>
-  <p>Devs: <% @mission.matches.each do |match| %>
-  <%= match.dev.name %></p>
-  <% end %>
+<div class="missionshow">
+        <div class="mission-desc">
+          <p><%= @mission.description %> </p>
+        </div>
+        <div class="mission-datedom">
+          <div class="mission-date">
+            <h4>Date</h4>
+            <p>from : <%= @mission.start_date %> to : <%= @mission.end_date %></p>
+          </div>
+          <div class="mission-dom">
+            <h4>Area</h4>
+            <p><%= @mission.area %></p>
+          </div>
+        </div>
+        <div class="mission-langsoft">
+          <div class="mission-lang">
+            <h4>Languages</h4>
+
+            <div class="lang-logos">
+             <% @mission.languages.each do |language| %>
+            <%= image_tag(language.langicon, size: "30x30")%>
+            <% end %>
+            </div>
+          </div>
+          <div class="mission-soft">
+            <h4>Soft skills</h4>
+            <% @mission.soft_skills.last(2).each do |soft_skill| %>
+            <p><%= soft_skill.skill %> </p>
+            <% end %>
+          </div>
+        </div>
+
 </div>
+
 <div class="pend-btn">
           <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
         </div>
