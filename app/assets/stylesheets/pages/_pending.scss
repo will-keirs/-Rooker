@@ -15,7 +15,6 @@
 }
 .pending-nav {
   display: flex;
-  background-color: grey;
   width: 80%;
   padding: 10px;
 }
@@ -36,10 +35,19 @@
     font-weight: bold;
   }
 }
+
 .pend-btn:hover{
   opacity: 85%;
   font-weight: bolder;
 }
+
+.my-button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 
 .mission-specs {
   background-color: rgb(187, 187, 187);
@@ -50,4 +58,5 @@
 .profile-selection {
   width: 80%;
   height: 100%;
+
 }

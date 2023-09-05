@@ -8,6 +8,7 @@ User.destroy_all
 SoftSkill.destroy_all
 Language.destroy_all
 
+
 user1 = User.new(
   email: "lolo@gmail.com",
   password: "123456",
@@ -20,7 +21,6 @@ user1 = User.new(
   fav: "Excellent worker"
 )
 user1.save!
-
 user2 = User.new(
   email: "lele@gmail.com",
   password: "123456",
@@ -33,7 +33,6 @@ user2 = User.new(
   fav: "Amazingly done !"
 )
 user2.save!
-
 mission1 = Mission.new(
   name: "Projet Danone",
   area: "food",
@@ -45,7 +44,6 @@ mission1 = Mission.new(
   user: user1
 )
 mission1.save!
-
 mission2 = Mission.new(
   name: "Projet Tesla",
   area: "automotive",
@@ -57,7 +55,6 @@ mission2 = Mission.new(
   user: user2
 )
 mission2.save!
-
 dev1 = Dev.new(
   name: "Antoine",
   email: "johnny@johnny.com",
@@ -74,8 +71,8 @@ dev1 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
-
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev1.save!
 dev2 = Dev.new(
@@ -94,7 +91,8 @@ dev2 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev2.save!
 dev3 = Dev.new(
@@ -113,7 +111,8 @@ dev3 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev3.save!
 dev4 = Dev.new(
@@ -132,7 +131,8 @@ dev4 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev4.save!
 
@@ -153,7 +153,8 @@ dev5 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev5.save!
 dev6 = Dev.new(
@@ -172,7 +173,8 @@ dev6 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev6.save!
 dev7 = Dev.new(
@@ -191,7 +193,8 @@ dev7 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev7.save!
 dev8 = Dev.new(
@@ -210,10 +213,10 @@ dev8 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev8.save!
-
 dev9 = Dev.new(
   name: "Alice",
   email: "tmas@lucy.com",
@@ -230,7 +233,8 @@ dev9 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev9.save!
 
@@ -250,7 +254,8 @@ dev10 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev10.save!
 
@@ -272,7 +277,8 @@ dev11 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev11.save!
 
@@ -292,7 +298,8 @@ dev12 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev12.save!
 
@@ -300,6 +307,7 @@ dev13 = Dev.new(
   name: "Halima",
   email: "Halima@lucy.com",
   availability: false,
+
   password: "123456",
   phone: "0102030406",
   area: "Dance",
@@ -313,10 +321,10 @@ dev13 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev13.save!
-
 match = Match.new(
   comment: "Amazing",
   dev: dev7,
@@ -410,17 +418,20 @@ match12 = Match.new(
 )
 match12.save!
 
-l = Language.create!(langtype: "Ruby", icon: "https://assets.stickpng.com/images/58482fc8cef1014c0b5e4a8a.png")
-l1 = Language.create!(langtype: "PHP", icon: "https://cdn.icon-icons.com/icons2/2415/PNG/512/php_plain_logo_icon_146397.png")
-l2 = Language.create!(langtype: "Python", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png")
-l3 = Language.create!(langtype: "Javascript", icon: "https://cdn-icons-png.flaticon.com/512/919/919828.png")
-l4 = Language.create!(langtype: "Java", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968282.png")
-l5 = Language.create!(langtype: "CSS-3", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968242.png")
-l6 = Language.create!(langtype: "HTML-5", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968267.png")
-l7 = Language.create!(langtype: "React", icon: "https://cdn-icons-png.flaticon.com/512/919/919851.png")
-l8 = Language.create!(langtype: "MySQL", icon: "https://cdn.icon-icons.com/icons2/2699/PNG/512/mysql_logo_icon_169941.png")
-l9 = Language.create!(langtype: "C++", icon: "https://e7.pngegg.com/pngimages/46/626/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template.png")
-l10 = Language.create!(langtype: "C", icon: "https://www.clipartmax.com/png/middle/240-2409409_c-programming-icon-c-programming-language-icon.png")
+l = Language.create!(langtype: "HTML-5", langicon: "01HTML.svg")
+l1 = Language.create!(langtype: "CSS-3", langicon: "02CSS.svg")
+l2 = Language.create!(langtype: "Javascript", langicon: "03JS.svg")
+l3 = Language.create!(langtype: "Ruby", langicon: "04Ruby.svg")
+l4 = Language.create!(langtype: "Rails", langicon: "05Rails.svg")
+l5 = Language.create!(langtype: "Typescript", langicon: "06Typescript.svg")
+l6 = Language.create!(langtype: "React", langicon: "07React.svg")
+l7 = Language.create!(langtype: "Objective C", langicon: "08Objective-c.svg")
+l8 = Language.create!(langtype: "C++", langicon: "09CPlusPlus.svg")
+l9 = Language.create!(langtype: "mySQL", langicon: "10mysql.svg")
+l10 = Language.create!(langtype: "PHP", langicon: "11PHP.svg")
+l11 = Language.create!(langtype: "Python", langicon: "12Python.svg")
+l12 = Language.create!(langtype: "Java", langicon: "13Java.svg")
+l13 = Language.create!(langtype: "Node JS", langicon: "14Node JS.svg")
 
 sk = SoftSkill.create!(skill: "Adaptability")
 sk1 = SoftSkill.create!(skill: "Stress management")

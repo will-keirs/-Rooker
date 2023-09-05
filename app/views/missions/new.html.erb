@@ -1,26 +1,87 @@
-<h1>Mission Details</h1>
+<%# <h1><% @mission_encours.name %>
+
+<%# <% current_user.missions.all.each do |mission| %>
+  <%# <h1>Nom de ma misison : <%= mission.name %>
+<%# <% end %>
 
 <div class="form_container">
+  <div class="mission-form">
+    <div class="steps">
+      <h1>Step 1</h1>
+      <h2>Please describe your Mission and needs</h2>
+    </div>
+    <%= simple_form_for @mission do |f| %>
+      <div class="complete-form">
+        <div class="form-left">
+          <div class="vertical-form-left">
+            <div class="form-gr-name">
+              <%= f.input :name, label: false, :placeholder => "Mission name", input_html: { class: 'form-control' }%>
+            </div>
+            <div class="form-gr-desc">
+                <%= f.input :description, label: false, :placeholder =>"Describe your mission here..."%>
+            </div>
+          </div>
+        </div>
+        <div class="form-extras">
+          <div class="form-gr-area">
+            <%= f.input :area, label: false, :placeholder =>"Business area", input_html: { class: 'form-control' }%>
+          </div>
+          <div class="form-gr-loc">
+            <%= f.input :location, label: false, :placeholder =>"Location", input_html: { class: 'form-control' }%>
+          </div>
+          <div class="form-gr-price">
+            <%= f.input :price, label: false, :placeholder =>"Price", input_html: { class: 'form-control' }%>
+          </div>
+          <div class="form-gr-price">
+            <%= f.input :start_date, label: false,
+                    :placeholder =>"Start date",
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } } %>
+              <%= f.input :end_date, label: false,
+                    :placeholder =>"End date",
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } } %>
+          </div>
+        </div>
+      </div>
+      <div class="form-gr-btn">
+          <%= f.button :submit, 'Next step', class: 'sub-btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+<%# CODE D'AVANT %>
+
+
+<%# <div class="form_container">
   <div class="mission-form">
   <h1>Step 1</h1>
     <br />
       <h2>Please describe your Mission and needs</h2>
         <%= simple_form_for @mission do |f| %>
-          <%= f.input :name, :placeholder => "Mission name"%>
-          <%= f.input :area, :placeholder =>"Business area"%>
-          <%= f.input :location, :placeholder =>"Location"%>
-          <%= f.input :price, :placeholder =>"0"%>
-          <%= f.input :start_date,
+          <%# <%= f.input :name, :placeholder => "Mission name"%>
+          <%# <%= f.input :area, :placeholder =>"Business area"%>
+          <%# <%= f.input :location, :placeholder =>"Location"%>
+          <%# <%= f.input :price, :placeholder =>"0"%>
+          <%# <%= f.input :start_date,
                   as: :string,
                   input_html: { data: { controller: "datepicker" } } %>
-            <%= f.input :end_date,
+            <%# <%= f.input :end_date,
                   as: :string,
                   input_html: { data: { controller: "datepicker" } } %>
-          <%= f.input :description, :placeholder =>"Describe your mission here..."%>
-          <%= f.button :submit, 'Next step' %>
-        <% end %>
-  </div>
-</div>
+          <%# <%= f.input :description, :placeholder =>"Describe your mission here..."%>
+          <%# <%= f.button :submit, 'Next step' %>
+        <%# <% end %>
+  <%# </div>
+</div> %>
+
+
+
 
                 <%# <h2 class="fs-title">Mission Details</h2>
                 <h3 class="fs-subtitle">Please describe your Mission and Needs</h3>

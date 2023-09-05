@@ -4,6 +4,7 @@ class Mission < ApplicationRecord
   has_many :devs, through: :matches, source: :dev
   has_many :devlangmissions
   has_many :devsoftmissions
+  has_many :langtypes
   has_many :languages, through: :devlangmissions
   has_many :soft_skills, through: :devsoftmissions
 end

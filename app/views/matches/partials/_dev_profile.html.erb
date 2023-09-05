@@ -22,7 +22,7 @@
       </div>
       <div class="dev-upvote">
           <h4><strong><%= @dev.upvote %></strong></h4>
-          <%= image_tag("upvote.png", class: "glow", size: "40*40") %>
+          <%= image_tag("upvote.png", class: "glow",  :height =>"40", :width => "40") %>
       </div>
     </div>
     <div class="dev-my-comment">
@@ -51,7 +51,7 @@
 
           <% @dev.languages.each do |l| %>
               <ul>
-                <li><%= image_tag( l.icon, size: "30*30") %></li>
+                <li><%= image_tag( l.icon,  :height => "30", :width => "30") %></li>
               </ul>
             <% end %>
           </div>
@@ -71,9 +71,9 @@
     <div class="dev-contact">
       <div class="avail-chat">
           <% if @dev.availability == true %>
-            <%= image_tag("true.png", size: "40*40", class: "rounded-circle pin") %>
+            <%= image_tag("true.png",   :height => "40", :width => "40", class: "rounded-circle pin") %>
           <% else %>
-            <%= image_tag("false.png", size: "40*40", class: "rounded-circle") %>
+            <%= image_tag("false.png",   :height => "40", :width => "40", class: "rounded-circle") %>
           <% end %>
           <h3 class="glow"><strong>Chat</strong></h3>
       </div>

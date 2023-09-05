@@ -1,17 +1,63 @@
 
 <div class="form_container">
   <div class="mission-form">
-  <h1>Step 2</h1>
+    <h1>Step 2</h1>
     <br />
       <h2>What languages do you need ?</h2>
         <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
-          <%= simple_fields_for :languages do |sk| %>
-            <% sk.input :languages, collection: Language.pluck(:langtype) %>
+          <%= simple_fields_for :language do |sk| %>
+            <% sk.input :language, collection: Language.all %>
           <% end %>
           <%= f.hidden_field :query, value: @best %>
-
           <%= f.button :submit, "Next step"%>
         <% end %>
   </div>
+  
+  <div class="mission-form2">
+    <div class="prog-space">
+      <div class="prog-bar">
+        <div class="step-circle activated">1
+          <div class="circle-text left">Mission details</div>
+        </div>
+        <div class="step-line active"></div>
+        <div class="step-circle activated"> 2
+          <div  class="circle-text center"> Languages</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-circle">
+          3
+          <div  class="circle-text right">Soft skills</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <h4> Wich languages your dev has to know?</h4>
+    </div>
+
+    <div class="check-group"  >
+
+      <% @languages.each do |language| %>
+        <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
+          <div class="clickable">
+              <% if language.langicon.present? %>
+                <%= image_tag language.langicon, size: "40x40" %>
+              <% end %>
+              <p><%= language.langtype %></p>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="check-buttons">
+      <div class="previous-step">
+        <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
+      </div>
+      <div class="next-step">
+        <p><%= link_to 'Next step', step_three_path(@mission), class: "next-link" %></p>
+      </div>
+    </div>
+  </div>
 </div>
-<button><%= link_to 'Back', edit_mission_path(@mission) %></button>
+<%# <button><%= link_to 'Back', edit_mission_path(@mission) %>
+<%# </button> %>
