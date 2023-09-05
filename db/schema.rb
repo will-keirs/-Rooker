@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.string "area"
     t.integer "upvote"
     t.string "location"
-    t.integer "score"
     t.string "photo"
     t.text "description"
     t.string "github_link"
@@ -47,6 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.string "twitter_link"
     t.string "facebook_link"
     t.string "insta_link"
+    t.integer "score", default: 0
+
   end
 
   create_table "devsoftmissions", force: :cascade do |t|
@@ -64,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.string "langtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
     t.string "langicon"
     t.string "icon"
   end
@@ -75,7 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.bigint "mission_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "score"
+    t.integer "score", default: 0
     t.index ["dev_id"], name: "index_matches_on_dev_id"
     t.index ["mission_id"], name: "index_matches_on_mission_id"
   end

@@ -71,8 +71,8 @@ dev1 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
-
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev1.save!
 dev2 = Dev.new(
@@ -91,7 +91,8 @@ dev2 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev2.save!
 dev3 = Dev.new(
@@ -110,7 +111,8 @@ dev3 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev3.save!
 dev4 = Dev.new(
@@ -129,7 +131,8 @@ dev4 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev4.save!
 
@@ -150,8 +153,8 @@ dev5 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
-
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev5.save!
 dev6 = Dev.new(
@@ -170,8 +173,8 @@ dev6 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
-
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev6.save!
 dev7 = Dev.new(
@@ -190,8 +193,8 @@ dev7 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
-
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev7.save!
 dev8 = Dev.new(
@@ -210,7 +213,8 @@ dev8 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev8.save!
 dev9 = Dev.new(
@@ -229,7 +233,8 @@ dev9 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev9.save!
 
@@ -249,7 +254,8 @@ dev10 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev10.save!
 
@@ -271,7 +277,8 @@ dev11 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev11.save!
 
@@ -291,7 +298,8 @@ dev12 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev12.save!
 
@@ -313,7 +321,8 @@ dev13 = Dev.new(
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
   twitter_link: "https://lorenzolara.myportfolio.com/",
-  facebook_link: "https://lorenzolara.myportfolio.com/"
+  facebook_link: "https://lorenzolara.myportfolio.com/",
+  insta_link: "https://lorenzolara.myportfolio.com/"
 )
 dev13.save!
 match = Match.new(
