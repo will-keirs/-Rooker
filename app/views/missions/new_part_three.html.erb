@@ -3,17 +3,16 @@
   <div class="mission-form">
     <h1>Step 3</h1>
       <br />
-
-        <h2>What Soft skills do you need ?</h2>
-          <%= simple_form_for @mission do |f| %>
-              <%= simple_fields_for :languages do |l| %>
-                <% l.input :langtype, collection: SoftSkill.all %>
-              <% end %>
-
+      <h2>What Soft skills do you need ?</h2>
+        <%= simple_form_for @mission do |f| %>
+            <%= simple_fields_for :languages do |l| %>
+              <% l.input :langtype, collection: SoftSkill.pluck(:skill) %>
+            <% end %>
             <%= f.hidden_field :query, value: @best %>
             <%= f.button :submit, "Match!" %>
           <% end %>
   </div>
+  
   <div class="mission-form2">
     <div class="prog-space">
       <div class="prog-bar">

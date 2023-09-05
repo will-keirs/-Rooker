@@ -1,0 +1,48 @@
+<div class="dev-outer-card">
+  <% @matches.each do |match| %>
+    <div class="dev-inner-card">
+        <div class="dev-inner-card-image">
+          <%= link_to image_tag( match.dev.photo, size: "150*150", class: "rounded-circle"), match_path(match) %>
+        </div>
+        <div class="dev-inner-card-col">
+            <h5><strong>Infos:</strong></h5>
+            <h5><strong><%= link_to match.dev.name, match_path(match) %></strong></h5>
+            <p><%= match.dev.diploma %></p>
+            <p><%= match.dev.location %></p>
+        </div>
+        <div class="dev-inner-card-col">
+              <h5><strong>Languages:</strong></h5>
+          <% match.dev.languages.first(3).each do |l| %>
+            <ul>
+              <li><%= l.langtype %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="dev-inner-card-col soft">
+         <h5><strong>Soft skills:</strong></h6>
+          <% match.dev.soft_skills.first(3).each do |sk| %>
+            <ul>
+              <li><%= sk.skill %></li>
+            </ul>
+          <% end %>
+        </div>
+        <div class="dev-inner-card-col">
+          <div class="dev-inner-card-chat">
+                <% if match.dev.availability == true %>
+                  <%= image_tag("true.png", size: "20*20", class: "rounded-circle") %>
+                <% else %>
+                  <%= image_tag("false.png", size: "20*20", class: "rounded-circle") %>
+                <% end %>
+                <h5 class="glow"><strong>Chat</strong></h5>
+            </div>
+            <div class="dev-inner-card-vote">
+                <p><strong><%= match.dev.upvote %></strong></p>
+                <%= image_tag("upvote.png", size: "30*30", :class => "glow") %>
+            </div>
+        </div>
+        <div class="dev-inner-card-col">
+          <i class="fa-solid fa-bell glow fa-4x"></i>
+        </div>
+    </div>
+  <% end %>
+</div>

@@ -1,13 +1,14 @@
 class MatchesController < ApplicationController
   def index
-
-    @mission = Mission.last
-    @matches = Match.all
+    @mission = Mission.find(params[:mission_id])
+    @matches = @mission.matches
   end
 
   def show
-    @mission = Mission.find(params[:id])
     @match = Match.find(params[:id])
+    @mission = @match.mission
+    @matches = @mission.matches
+    @dev = @match.dev
   end
 
   def new
@@ -27,5 +28,9 @@ class MatchesController < ApplicationController
 
   def match_params
     params.require(:match).permit(:comment)
+  end
+
+  def mission_params
+    params.require(:mission).permit(:name, :description, :area, :location, :start_date, :end_date, :price)
   end
 end

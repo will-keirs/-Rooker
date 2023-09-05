@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_04_085909) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devlangmissions", force: :cascade do |t|
-    t.bigint "dev_id", null: false
-    t.bigint "mission_id", null: false
+    t.integer "dev_id"
+    t.integer "mission_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "language_id", null: false
@@ -38,11 +38,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.string "area"
     t.integer "upvote"
     t.string "location"
+    t.integer "score"
+    t.string "photo"
+    t.text "description"
+    t.string "github_link"
+    t.string "linkedin_link"
+    t.string "website_link"
+    t.string "twitter_link"
+    t.string "facebook_link"
+    t.string "insta_link"
+
   end
 
   create_table "devsoftmissions", force: :cascade do |t|
-    t.bigint "dev_id", null: false
-    t.bigint "mission_id", null: false
+    t.integer "dev_id"
+    t.integer "mission_id"
     t.bigint "soft_skill_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,6 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_04_140548) do
     t.bigint "mission_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score"
     t.index ["dev_id"], name: "index_matches_on_dev_id"
     t.index ["mission_id"], name: "index_matches_on_mission_id"
   end

@@ -1,0 +1,78 @@
+
+.dev-outer-card {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 214, 214);
+  width: 80%;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.dev-inner-card-image {
+  padding: 20px;
+  padding-top: 30px;
+  justify-content: center;
+  width: 200px;
+
+}
+.dev-inner-card {
+  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-evenly;
+  border: 1px solid rgb(152, 152, 152);
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  flex-direction: row;
+}
+
+.dev-inner-card-col {
+  padding: 30px;
+  justify-content: center;
+ display: flex;
+ flex-direction: column;
+ border-left: 1px solid black;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ a{
+  text-decoration: none;
+  color: black;
+ }
+ a:hover{
+  color: white;
+ }
+}
+
+.dev-inner-card-chat{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  img{
+    margin-left: 15px;
+  }
+}
+
+.dev-inner-card-vote {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-top: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.glow:hover{
+  color: rgba(255, 255, 255, 1);
+  opacity: 90%;
+}
+
+.center-availability {
+  padding-left: 10px;
+}

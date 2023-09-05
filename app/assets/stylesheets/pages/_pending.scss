@@ -3,23 +3,41 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 10px;
 }
 
+.megatitle {
+  color: white;
+}
+.Container {
+  min-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
 .pending-nav {
   display: flex;
   width: 80%;
-  height: 60px;
-  justify-content: space-between;
+  padding: 10px;
 }
 
 .pend-text {
-  width: 500px;
+  flex-grow: 1;
+  padding: 2px;
 }
 
 .pend-btn{
-  width: 235px;
-  // padding: 15px;
+  border: 1px solid rgb(40, 40, 40);
+  flex-grow: 2;
   background-color: black;
+  padding: 2px;
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+}
+.pend-btn:hover{
+  opacity: 85%;
+  font-weight: bolder;
 }
 
 .my-button {
@@ -30,65 +48,12 @@
 
 }
 
-.mission-specs {
-  display: flex;
-  background-color:#D9D9D9;
-  width: 80%;
-  height: 200px;
-  padding: 20px;
 
-  p {
-    margin-bottom: 8px;
-  }
-
-  h4 {
-    margin-bottom: 20px;
-  }
-}
-
-.mission-desc {
-  width: 40%;
-  padding: 0px 20px;
-}
-
-.mission-datedom {
-
-  width: 30%;
-  border-left: 1px solid black;
-}
-
-.mission-date {
-  padding-left: 20px;
-}
-
-.mission-dom {
-  padding-left: 20px;
-}
-
-.mission-langsoft{
-  width: 30%;
-  border-left: 1px solid black;
-}
-
-.mission-lang {
-  padding-left: 20px;
-}
-
-.lang-logos{
-  margin-bottom: 8px;
-}
-
-.mission-soft{
-  padding-left: 20px;
+  padding: 10px;
 }
 
 .profile-selection {
-  background-color: #EBEBEB;
   width: 80%;
-  height: 300px;
-  padding: 20px;
+  height: 100%;
 
-  h3 {
-    padding-bottom: 20px;
-  }
 }
