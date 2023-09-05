@@ -76,6 +76,27 @@ position: absolute;
 z-index: 1;
 }
 
+.basket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.basket-li {
+  list-style: none;
+}
+.basket-superpose {
+  padding: 10px;
+  gap: 5px;
+  column-count: 2;
+  margin-left: 30px;
+  background-color: rgba(174, 171, 171, 0.3);
+  position: absolute;
+  top: 50px;
+  left: 20px;
+
+  z-index: 1;
+}
 // @dev.languages.includes?(@mission.languages)
 //   dev +3pts => la raie => laraie.order
 //   1

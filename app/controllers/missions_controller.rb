@@ -76,6 +76,7 @@ class MissionsController < ApplicationController
   end
 
   def lmatch
+    @matches = Match.all
     @lang = Language.all
     @mission = Mission.find(params[:id])
     @devs = Dev.all
