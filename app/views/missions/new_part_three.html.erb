@@ -12,7 +12,7 @@
             <%= f.button :submit, "Match!" %>
           <% end %>
   </div>
-  
+
   <div class="mission-form2">
     <div class="prog-space">
       <div class="prog-bar">
@@ -51,7 +51,7 @@
         <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
       </div>
       <div class="next-step">
-        <p><%= link_to 'Go find a match!', step_three_path(@mission), class: "next-link" %></p>
+        <p><%= link_to 'Go find a match!', match_landing_path(@mission), class: "next-link" %></p>
       </div>
     </div>
   </div>

@@ -4,10 +4,19 @@
    data-match-mission-id-value="<%= @mission.id %>"
    class="match-outer-card">
     <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
+    <div class="basket">
+      <div class="basket-superpose">
+          <h2><strong>Your list :</strong></h2>
+          <% @mission.matches.each do |match| %>
+            <li class="basket-li">
+             <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', data: { target: 'match.next' }, class: "rounded-circle" %>
+             <%= match.dev.name %>
+            </li>
+          <% end %>
+      </div>
+    </div>
     <div class="big-center">
       <div class="match-dev-infos">
-      <p><%= @best %></p>
-      <p><%= @best_index %></p>
 
         <div class="dev-img"  >
            <div class="superpose">
