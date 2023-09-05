@@ -31,6 +31,12 @@ class MissionsController < ApplicationController
 
   def form_update_step_two
     @mission = Mission.find(params[:id])
+    selected_languages = params[:languages]
+    selected_languages.each do |language|
+      if language[1] == "1"
+        Devlangmission.create(mission: @mission, language_id: language[0])
+      end
+    end
     if @mission.save!
       redirect_to step_three_path(@mission)
     else
@@ -45,8 +51,14 @@ class MissionsController < ApplicationController
 
   def form_update_step_three
     @mission = Mission.find(params[:id])
+    selected_skills = params[:skills]
+    selected_skills.each do |skill|
+      if skill[1] == "1"
+        Devsoftmission.create(mission: @mission, soft_skill_id: skill[0])
+      end
+    end
     if @mission.save!
-      redirect_to step_three_path(@mission)
+      redirect_to match_landing_path(@mission)
     else
       render :new_part_two
     end

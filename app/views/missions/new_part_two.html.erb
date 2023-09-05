@@ -12,7 +12,7 @@
           <%= f.button :submit, "Next step"%>
         <% end %>
   </div>
-  
+
   <div class="mission-form2">
     <div class="prog-space">
       <div class="prog-bar">
@@ -37,15 +37,33 @@
 
     <div class="check-group"  >
 
-      <% @languages.each do |language| %>
-        <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
+      <%# <% @languages.each do |language| %>
+        <%# <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
           <div class="clickable">
+              <% if language.langicon.present? %>
+                <%# <%= image_tag language.langicon, size: "40x40" %>
+              <%# <% end %>
+              <%# <p><%= language.langtype</p>
+          <%# </div>
+        </div>
+      <% end %>
+
+      <%= form_with url: update_step_two_path(@mission), method: 'POST' do |f| %>
+        <% @languages.each do |language| %>
+          <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
+            <%= f.check_box "languages[#{language.id}]", class: "d-none", "data-newparttwo-target": 'checkbox' %>
+               <%# <input class= "test" type="checkbox" value="1" name="languages[#{language.id}]" id="languages[#{language.id}]> %>
+            <div class="clickable">
               <% if language.langicon.present? %>
                 <%= image_tag language.langicon, size: "40x40" %>
               <% end %>
-              <p><%= language.langtype %></p>
+              <%= f.label language.langtype %>
+            </div>
           </div>
-        </div>
+        <% end %>
+          <div class="check-buttons">
+            <%= f.submit 'Next step', class: "next-link" %>
+          </div>
       <% end %>
 
     </div>
