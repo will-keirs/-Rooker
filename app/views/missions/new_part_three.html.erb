@@ -1,17 +1,17 @@
 
 <div class="form_container">
-  <div class="mission-form">
+  <%# <div class="mission-form">
     <h1>Step 3</h1>
       <br />
       <h2>What Soft skills do you need ?</h2>
         <%= simple_form_for @mission do |f| %>
-            <%= simple_fields_for :languages do |l| %>
-              <% l.input :langtype, collection: SoftSkill.pluck(:skill) %>
-            <% end %>
-            <%= f.hidden_field :query, value: @best %>
-            <%= f.button :submit, "Match!" %>
-          <% end %>
-  </div>
+            <%# <%= simple_fields_for :languages do |l| %>
+              <%# <% l.input :langtype, collection: SoftSkill.pluck(:skill) %>
+            <%# <% end %>
+            <%# <%= f.hidden_field :query, value: @best %>
+            <%# <%= f.button :submit, "Match!" %>
+          <%# <% end %>
+  <%# </div> %>
 
   <div class="mission-form2">
     <div class="prog-space">
@@ -20,12 +20,11 @@
           <div class="circle-text left">Mission details</div>
         </div>
         <div class="step-line active"></div>
-        <div class="step-circle activated"> 2
+        <div class="step-circle activated">2
           <div  class="circle-text center"> Languages</div>
         </div>
         <div class="step-line active"></div>
-        <div class="step-circle activated">
-          3
+        <div class="step-circle activated">3
           <div  class="circle-text right">Soft skills</div>
         </div>
       </div>
@@ -36,50 +35,34 @@
     </div>
 
     <div class="check-group">
-      <% @skills.each do |item| %>
-        <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
+      <%# <% @skills.each do |item| %>
+        <%# <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
               <div class="clickable">
                 <% if item.skill.present? %>
-                  <p><%= item.skill %></p>
-                <% end %>
-              </div>
+                  <%# <p><%= item.skill</p> %>
+                <%# <% end %>
+              <%# </div>
         </div>
       <% end %>
 
-      <%= form_with url: update_step_three_path(@mission), method: 'POST' do |f| %>
+      <%= form_with class: "d-flex justify-content-end flex-wrap gap-3 ", url: update_step_three_path(@mission), method: 'POST' do |f| %>
         <% @skills.each do |item| %>
           <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
               <%= f.check_box "skills[#{item.id}]", class: "d-none", "data-newparttwo-target": 'checkbox' %>
             <div class="clickable">
               <% if item.skill.present? %>
-              <%= f.label item.skill %>
+              <%= f.label item.skill, style: "font-size: 14px; margin-top: 10px; text-align: center;" %>
               <% end %>
             </div>
           </div>
         <% end %>
           <div class="check-buttons">
+            <div class="previous-step">
+              <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
+            </div>
             <%= f.submit 'Go find a match!', class: "next-link" %>
           </div>
       <% end %>
-
-
-
-    </div>
-
-
-
-
-
-    <div class="check-buttons">
-      <div class="previous-step">
-        <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
-      </div>
-      <div class="next-step">
-        <p><%= link_to 'Go find a match!', match_landing_path(@mission), class: "next-link" %></p>
-      </div>
     </div>
   </div>
-</div>
-
-
 </div>

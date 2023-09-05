@@ -6,9 +6,24 @@
 
 <div class="form_container">
   <div class="mission-form">
-    <div class="steps">
-      <h1>Step 1</h1>
-      <h2>Please describe your Mission and needs</h2>
+    <div class="prog-space">
+      <div class="prog-bar">
+        <div class="step-circle activated">1
+          <div class="circle-text left">Mission details</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-circle"> 2
+          <div  class="circle-text center"> Languages</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-circle">
+          3
+          <div  class="circle-text right">Soft skills</div>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <h4> Please describe your Mission and needs </h4>
     </div>
     <%= simple_form_for @mission do |f| %>
       <div class="complete-form">

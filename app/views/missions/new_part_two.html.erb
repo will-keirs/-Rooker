@@ -1,17 +1,17 @@
 
 <div class="form_container">
-  <div class="mission-form">
+  <%# <div class="mission-form">
     <h1>Step 2</h1>
     <br />
       <h2>What languages do you need ?</h2>
         <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
-          <%= simple_fields_for :language do |sk| %>
-            <% sk.input :language, collection: Language.all %>
-          <% end %>
-          <%= f.hidden_field :query, value: @best %>
-          <%= f.button :submit, "Next step"%>
-        <% end %>
-  </div>
+          <%# <%= simple_fields_for :language do |sk| %>
+            <%# <% sk.input :language, collection: Language.all %>
+          <%# <% end %>
+          <%# <%= f.hidden_field :query, value: @best %>
+          <%# <%= f.button :submit, "Next step"%>
+        <%# <% end %>
+  <%# </div> %>
 
   <div class="mission-form2">
     <div class="prog-space">
@@ -35,20 +35,8 @@
       <h4> Wich languages your dev has to know?</h4>
     </div>
 
-    <div class="check-group"  >
-
-      <%# <% @languages.each do |language| %>
-        <%# <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
-          <div class="clickable">
-              <% if language.langicon.present? %>
-                <%# <%= image_tag language.langicon, size: "40x40" %>
-              <%# <% end %>
-              <%# <p><%= language.langtype</p>
-          <%# </div>
-        </div>
-      <% end %>
-
-      <%= form_with url: update_step_two_path(@mission), method: 'POST' do |f| %>
+    <div class="check-group">
+      <%= form_with  class: "d-flex justify-content-end flex-wrap gap-3 ", url: update_step_two_path(@mission), method: 'POST' do |f| %>
         <% @languages.each do |language| %>
           <div data-controller="newparttwo" data-newparttwo-target="clickable" class="check-frame" data-action="click->newparttwo#toggleActiveClass">
             <%= f.check_box "languages[#{language.id}]", class: "d-none", "data-newparttwo-target": 'checkbox' %>
@@ -57,25 +45,17 @@
               <% if language.langicon.present? %>
                 <%= image_tag language.langicon, size: "40x40" %>
               <% end %>
-              <%= f.label language.langtype %>
+              <%= f.label language.langtype, style: "font-size: 14px; margin-top: 10px;"%>
             </div>
           </div>
         <% end %>
           <div class="check-buttons">
+            <div class="previous-step">
+              <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
+            </div>
             <%= f.submit 'Next step', class: "next-link" %>
           </div>
       <% end %>
-
-    </div>
-    <div class="check-buttons">
-      <div class="previous-step">
-        <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
-      </div>
-      <div class="next-step">
-        <p><%= link_to 'Next step', step_three_path(@mission), class: "next-link" %></p>
-      </div>
     </div>
   </div>
 </div>
-<%# <button><%= link_to 'Back', edit_mission_path(@mission) %>
-<%# </button> %>
