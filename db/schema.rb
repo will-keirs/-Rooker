@@ -64,7 +64,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_094028) do
     t.string "langtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "icon"
     t.string "langicon"
   end
 

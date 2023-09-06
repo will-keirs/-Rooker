@@ -1,0 +1,152 @@
+.missionshow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.all-columns {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.mission-description {
+  width: 50%;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.cols {
+  display: flex;
+  flex-direction: row;
+  height: 25%;
+}
+.cols2 {
+  display: flex;
+  flex-direction: row;
+  height: 25%;
+  border-top: 1px solid #071E3D;
+  padding-top: 17px;
+}
+
+.cols-lang-devs {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #071E3D;
+  padding-top: 17px;
+}
+
+.mission-time {
+  width: 50%;
+  border-right: 1px solid #071E3D;
+  margin-bottom: 17px;
+}
+.mission-area {
+  width: 50%;
+  padding-left: 20px;
+  margin-bottom: 17px;
+}
+
+.mission-price {
+  width: 50%;
+  border-right: 1px solid #071E3D;
+  margin-bottom: 17px;
+}
+
+.mission-location {
+  width: 50%;
+  padding-left: 20px;
+  margin-bottom: 17px;
+}
+
+.mission-languages {
+  width: 50%;
+  border-right: 1px solid #071E3D;
+}
+
+.mission-devs {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+// .selected-dev {
+//   display: flex;
+//   width: 173px;
+//   flex-wrap: wrap;
+// }
+
+.dev-elmnt{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.dev-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p {
+    font-size: 10px;
+    font-size: 10px;
+  }
+}
+
+.mission-softskills {
+  height: 20%;
+  border-top: 1px solid #071E3D;
+  padding-top: 17px;
+}
+
+.mission-description {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #071E3D;
+  column-gap: 10%;
+  padding-left: 20px;
+}
+
+.ici-desc {
+  height: 80%;
+}
+
+.show-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-content: end;
+  height: 10%;
+  gap: 25px;
+}
+
+.button-show {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white;
+  background-color: #071E3D;
+  width: 160px;
+  height: 40px;
+}
+
+.back-match {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #21E6C1;
+  }
+}
+
+.back-dash {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #21E6C1;
+  }
+}
