@@ -3,27 +3,21 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="match"
 export default class extends Controller {
 
-   static targets = ["selection", "form", "container"]
+   static targets = ["selection", "formSelect","formNext", "container"]
    static values = {
     index: Number,
     missionId: Number,
     dev: Number
  }
 
-  connect() {
-    console.log("bonjour");
-    console.log(this.devValue);
-  }
-
-
   selected(event) {
     event.preventDefault()
-    const url = `${this.formTarget.action}`
+    const url = `${this.formSelectTarget.action}`
 
     fetch(url, {
       method: "POST",
       "content-type": "text/plain",
-      body: new FormData(this.formTarget)
+      body: new FormData(this.formSelectTarget)
     })
     .then(response => response.text())
     .then(data => {
@@ -33,12 +27,12 @@ export default class extends Controller {
 
   next(event) {
     event.preventDefault()
-    const url = `${this.formTarget.action}`
+    const url = `${this.formNextTarget.action}`
 
     fetch(url, {
       method: "POST",
       "content-type": "text/plain",
-      body: new FormData(this.formTarget)
+      body: new FormData(this.formNextTarget)
     })
     .then(response => response.text())
     .then(data => {

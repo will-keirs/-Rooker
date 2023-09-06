@@ -9,11 +9,11 @@ class Dev < ApplicationRecord
   attribute :diploma, :string
   attribute :availability, :boolean
 
-  def self.get_devs_by_mission(mission)
+  def self.get_staffed_devs(mission)
     joins(:matches).where(matches: {mission: mission})
   end
 
-  def self.get_bests_dev_from_mission(mission)
+  def self.get_bests_dev_for_mission(mission)
     all.each do |dev|
       dev.score = 0
       mission.languages.each do |language|
@@ -27,7 +27,7 @@ class Dev < ApplicationRecord
     end
     # @matchable_devs = matchable_devs
     # devs = Dev.all.map(&:score)
-    @matchable_devs = Dev.where('score >= ?', 10).order(score: :desc)
+    @matchable_devs = Dev.where('score >= ?', 3).order(score: :desc)
     # @matchable_devs = matchable_devs.sort_by(:score)
   end
 

@@ -80,76 +80,46 @@ class MissionsController < ApplicationController
     @lang = Language.all
     @mission = Mission.find(params[:id])
     @devs = Dev.all
-    @last_dev = Dev.last.id + 1
-    # en mode method de class :
-    # Dev.get_bests_dev_from_mission(@mission)
-    ####
-    @matchable_devs = Dev.get_bests_dev_from_mission(@mission) || Dev.all
     @dev_score = Dev.first
-    @best = @matchable_devs.first.id
+
+
+    @available_devs = Dev.get_bests_dev_for_mission(@mission) || Dev.all
+    @best = @available_devs.first.id
     @dev = Dev.find(@best)
     @best_index = 0
-    # @dev = Dev.find(@matchable_devs[@best_index])
   end
 
-
   def lmatch_dev_switcher
-    # @devalll = Dev.all
-    # @devalll.each do |dev|
-    #   @matchable_devs << dev.id
-    # end
-    # <<<<< Remplacer par @devall =  Dev.all.map(&:id)
     @mission = Mission.find(params[:id])
 
-    ########" A DEGAGER ########
-    # @available_dev_ids = Dev.all.map(&:id).uniq
-    # @devall_selected_ids = Dev.get_bests_dev_from_mission(@mission)
-    # @devall_selected_ids = @devall_selected_ids.map(&:id)    # return @available sans soustration ???
-    #############
-
-    @all_dev_ids_by_score =  Dev.get_bests_dev_from_mission(@mission).map(&:id).uniq
-    @mission_staffed_devs = Dev.get_devs_by_mission(@mission).map(&:id).uniq
-
-    @available_dev_ids = @all_dev_ids_by_score - @mission_staffed_devs
-
-    unless @available_dev_ids.empty? && @available_dev_ids.length < @available_dev_ids.length
-      @available_dev_ids = @all_dev_ids_by_score - @mission_staffed_devs
-    end
-
     if params[:selected_dev_id].present?
-      match_dev = Dev.find(params[:selected_dev_id])
-      Match.create!(mission: @mission, dev: match_dev)
-      @mission_staffed_devs = Dev.get_devs_by_mission(@mission).map(&:id).uniq
-      @available_dev_ids = @available_dev_ids
-      @available_dev_ids = @available_dev_ids - @mission_staffed_devs
-      @available_dev_ids
+      matching_dev = Dev.find(params[:selected_dev_id])
+      Match.create!(mission: @mission, dev: matching_dev)
     end
 
-    @last_dev = (@available_dev_ids.last)
+    @dev_ids_by_score =  Dev.get_bests_dev_for_mission(@mission).map(&:id).uniq
+    @staffed_dev_ids = Dev.get_staffed_devs(@mission).map(&:id).uniq
+    @available_dev_ids = @dev_ids_by_score - @staffed_dev_ids
 
-    if params[:query].present?
-      dev_id = (params[:query].to_i)
-      @best = 0
-      @best = dev_id += 1
-      @best_index = params[:best_index].to_i
-      @best_index = @best_index += 1
-
-      if @best == @last_dev
-        (@best = Dev.first.id)
-        (@best_index = 0)
+    unless @available_dev_ids.empty?
+      if params[:best_index].present?
+        @best_index = params[:best_index].to_i
+        @best_index = @best_index += 1
       end
 
-      unless @available_dev_ids.empty?
-        @dev = Dev.find(@available_dev_ids[@best_index])
-        respond_to do |format|
-          format.text { render partial: "missions/lmatch", locals: {dev: @dev, mission: @mission}, formats: [:html] }
-        end
-      else
-        redirect_to mission_matches_path(@mission)
+      if @best_index > (@available_dev_ids.size-1)
+        @best_index = 0
+      end
+
+      @dev = Dev.find(@available_dev_ids[@best_index])
+      respond_to do |format|
+        format.text { render partial: "missions/lmatch", locals: {dev: @dev, mission: @mission}, formats: [:html] }
+      end
+    else
+      respond_to do |format|
+        format.text { render partial: "missions/no_more", locals: {dev: @dev, mission: @mission}, formats: [:html] }
       end
     end
-
-
   end
 
   private
