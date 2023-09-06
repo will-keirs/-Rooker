@@ -50,7 +50,7 @@
 
           <% @dev.languages.each do |l| %>
               <ul>
-                <li><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
+                <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(l.langtype, "review") %>"><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
               </ul>
             <% end %>
           </div>

@@ -70,9 +70,9 @@
       </div>
       <div class="skill-div">
         <h4><strong>Languages</strong></h4>
-        <div>
+        <div class="tooltip-flex">
             <% @dev.languages.each do |language| %>
-              <%= image_tag(language.langicon, size: "30x30")%>
+              <p data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%></p>
             <% end %>
         </div>
       </div>

@@ -20,9 +20,11 @@
           <div class="mission-lang">
             <h4>Languages</h4>
             <div class="lang-logos">
+            <ul>
              <% @mission.languages.each do |language| %>
-            <%= image_tag(language.langicon, size: "30x30")%>
-            <% end %>
+                <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%></li>
+              <% end %>
+              </ul>
             </div>
           </div>
           <div class="mission-soft">
