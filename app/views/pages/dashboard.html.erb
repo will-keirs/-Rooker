@@ -17,11 +17,13 @@
     <div class="favoris">
       <h2>Favorites</h2>
       <ul>
-      <% current_user.matches.last(3).each do |match| %>
-      <li><%= match.dev.name %></li>
-      <% end %>
+        <% current_user.matches.last(3).each do |match| %>
+          <li>
+            <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', class: "rounded-circle" %>
+            <%= match.dev.name %>
+          </li>
+        <% end %>
       </ul>
-
     </div>
   </div>
 
@@ -59,10 +61,9 @@
               <h4>Languages</h4>
             </div>
             <div>
-            <% mission.languages.each do |language| %>
-            <%= image_tag(language.langicon, size: "30x30")%>
-            <% end %>
-
+              <% mission.languages.each do |language| %>
+                <%= image_tag(language.langicon, size: "30x30")%>
+              <% end %>
             </div>
           </div>
           <div class="hist-elmnt5">

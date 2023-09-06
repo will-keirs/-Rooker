@@ -51,7 +51,7 @@
 
           <% @dev.languages.each do |l| %>
               <ul>
-                <li><%= image_tag( l.icon,  :height => "30", :width => "30") %></li>
+                <li><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
               </ul>
             <% end %>
           </div>
@@ -68,7 +68,8 @@
       </div>
     <%# dev language , dev skills  %>
     </div>
-    <div class="dev-contact">
+    <div class="dev-contact"
+    data-controller="mailtoggler">
       <div class="avail-chat">
           <% if @dev.availability == true %>
             <%= image_tag("true.png",   :height => "40", :width => "40", class: "rounded-circle pin") %>
@@ -77,12 +78,24 @@
           <% end %>
           <h3 class="glow"><strong>Chat</strong></h3>
       </div>
-      <div class="dev-mail">
-          <i class="fa fa-envelope glow fa-6x" aria-hidden="true"></i>
-          <% @dev.email %>
-      </div>
-      <div class="ring-a-bell">
-          <i class="fa-solid fa-bell glow fa-6x"></i>
+   <div class="dev-mail"
+   data-action="click->mailtoggler#toggle">
+    <div data-mailtoggler-target="mail">
+      <i class="fa fa-envelope glow fa-6x" aria-hidden="true"></i>
+    </div>
+    <div data-mailtoggler-target="email" class="d-none">
+      <%= @dev.phone %>
+      <%= @dev.email %>
+    </div>
+  </div>
+    <div data-controller="mailtoggler2"
+        data-action="click->mailtoggler2#togglebell" >
+        <div data-mailtoggler2-target="bell" class="ring-a-bell">
+            <i class="fa-solid fa-bell glow fa-6x"></i>
+        </div>
+        <div >
+          <p data-mailtoggler2-target="bellname" class="d-none">Notification of contact sent to <%="#{@dev.name}"%></p>
+        </div>
       </div>
     <%# dev availability = chat , bell to notify  %>
   </div>
