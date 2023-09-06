@@ -4,7 +4,7 @@
  justify-content: center;
  margin-left: 100px;
  margin-right: 100px;
- margin-top: 50px;
+ margin-top: 40px;
  flex: 1;
 }
 
@@ -74,27 +74,32 @@ display: flex;
 }
 
 .dev-my-comment{
-  background-color: rgb(160, 160, 160);
-  padding: 10px;
+  background-color: rgb(213, 213, 213);
+  padding: 20px;
   padding-top: 50px;
   flex-grow: 1.5;
 }
 
 .dev-missions{
+  background-color: rgb(231, 230, 230);
   display: flex;
   flex-direction: column;
     h2{
-      margin: 20px;
+      margin: 10px;
     }
 }
 .dev-missions-it{
   font-size: 32px;
   display: flex;
   justify-content: center;
-  margin: 20px;
+  padding: 10px;
   li {
     list-style-type: none;
-    margin: 10px;
+    margin: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
   }
 }
 
@@ -102,7 +107,7 @@ display: flex;
   display: flex;
   justify-content: space-evenly;
   column-count: 2;
-  background-color: rgb(137, 137, 137);
+  background-color: rgb(213, 213, 213);
 }
 
 .dev-langs-container {
@@ -114,7 +119,13 @@ display: flex;
 }
 
 .dev-langs{
+  display: flex;
   padding: 10px;
+
+  li {
+
+    list-style: none;
+  }
 }
 
 .dev-softs-container {
@@ -127,12 +138,15 @@ display: flex;
 .dev-softs {
   padding: 10px;
   column-count: 2;
+  li {
+    list-style: none;
+  }
 }
 .dev-contact{
   padding: 20px;
   display: flex;
   flex-direction: row;
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(176, 173, 173);
   justify-content: space-evenly;
   .pin{
     border: 1px solid rgb(81, 81, 81);
@@ -145,20 +159,27 @@ display: flex;
 .dev-contact image_tag
 
 .avail-chat {
-  padding: 10px;
+
   display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .dev-mail{
-  padding: 10px;
-
+  padding-top: 17px;
 }
 
-.ring-a-bell{
-  padding: 10px;
+.dev-mail-text{
+  padding-top: 15px;
+}
 
+
+.ring-a-bell{
+  padding-top: 17px;
+}
+
+.ring-a-bell-text {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
 }
 
 .missionshow {

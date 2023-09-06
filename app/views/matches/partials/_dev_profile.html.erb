@@ -36,11 +36,10 @@
     </div>
   </div>
   <div class="dev-missions">
-    <h2><strong>Worked on</strong></h2>
     <div class="dev-missions-it">
+        <h2><strong>Worked on: </strong></h2>
       <% @dev.missions.each do |mission| %>
-        <li><strong><%= mission.name %></strong></li>
-      <%# link to mission history to add in name %>
+        <li><strong><%= link_to mission.name, mission_path(mission) %></strong></li>
       <% end %>
     </div>
   </div>
@@ -84,8 +83,10 @@
       <i class="fa fa-envelope glow fa-6x" aria-hidden="true"></i>
     </div>
     <div data-mailtoggler-target="email" class="d-none">
-      <%= @dev.phone %>
-      <%= @dev.email %>
+      <div class="dev-mail-text">
+      <p><strong>Phone: <%= @dev.phone %></strong></p>
+      <p><strong>Mail: <%= @dev.email %></strong></p>
+      </div>
     </div>
   </div>
     <div data-controller="mailtoggler2"
@@ -93,8 +94,8 @@
         <div data-mailtoggler2-target="bell" class="ring-a-bell">
             <i class="fa-solid fa-bell glow fa-6x"></i>
         </div>
-        <div >
-          <p data-mailtoggler2-target="bellname" class="d-none">Notification of contact sent to <%="#{@dev.name}"%></p>
+        <div class="ring-a-bell-text">
+          <p data-mailtoggler2-target="bellname" class="d-none"><strong>Notification sent to <%="#{@dev.name}"%></strong></p>
         </div>
       </div>
     <%# dev availability = chat , bell to notify  %>
