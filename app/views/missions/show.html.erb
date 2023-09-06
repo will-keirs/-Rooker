@@ -1,47 +1,80 @@
 
-<h1>Mission : <%= @mission.name %></h1>
 <div class="container">
-<div class="missionshow">
-        <div class="mission-desc">
-          <p><%= @mission.description %> </p>
-        </div>
-        <div class="">
-          <div class="mission-date">
+  <div class="mission-title">
+    <h1>Mission : <%= @mission.name %></h1>
+  </div>
+  <div class="missionshow">
+    <div class="all-columns">
+      <div class="columns">
+        <div class="cols">
+          <div class="mission-time">
             <h4>Date</h4>
-            <p>from : <%= @mission.start_date %> to : <%= @mission.end_date %></p>
+            <p>from : <%= @mission.start_date %> <br> to : <%= @mission.end_date %></p>
           </div>
-          <div class="mission-dom">
-            <h4>Area</h4>
+          <div class="mission-area">
+            <h4>Business area</h4>
             <p><%= @mission.area %></p>
           </div>
         </div>
-
-        <div class="">
-          <div class="mission-lang">
+        <div class="cols2">
+          <div class="mission-price">
+            <h4>Price</h4>
+            <p><%= @mission.price %>€ </p>
+          </div>
+          <div class="mission-location">
+            <h4>Location</h4>
+            <p><%= @mission.location %></p>
+          </div>
+        </div>
+        <div class="cols-lang-devs">
+          <div class="mission-languages">
             <h4>Languages</h4>
             <div class="lang-logos">
-             <% @mission.languages.each do |language| %>
-            <%= image_tag(language.langicon, size: "30x30")%>
-            <% end %>
+              <% @mission.languages.each do |language| %>
+              <%= image_tag(language.langicon, size: "30x30")%>
+              <% end %>
             </div>
           </div>
-          <div class="mission-soft">
-            <h4>Soft skills</h4>
-            <% @mission.soft_skills.last(2).each do |soft_skill| %>
-            <p><%= soft_skill.skill %> </p>
-            <% end %>
-            <h4>Selected Devs</h4>
-            <% @mission.devs.each do |dev| %>
-            <p><%= dev.name %></p>
-            <% end %>
+          <div class="mission-devs">
+            <div class="selected-dev">
+              <div class="select-dev-text">
+                <h4>Selected Devs</h4>
+              </div>
+              <div class="dev-elmnt">
+                <% @mission.devs.each do |dev| %>
+                  <div class="dev-info">
+                    <%= image_tag dev.photo , style: 'height:40px;width:40px;', class: "rounded-circle" %>
+                    <p><%= dev.name%></p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="mission-softskills">
+        <h4>Soft skills</h4>
+        <ul>
+        <% @mission.soft_skills.last(2).each do |soft_skill| %>
+        <li><%= soft_skill.skill %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="mission-description">
+      <h4>Description</h4>
+      <div class="ici-desc">
+        <p><%= @mission.description %> </p>
+      </div>
+      <div class="show-buttons">
+        <div class="button-show">
+          <%= link_to "Back to Match", match_landing_path(@mission), class: "back-match" %>
+        </div>
+        <div class="button-show">
+          <%= link_to "Dashboard", user_dashboard_path(@dashboard), class: "back-dash" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
-</div>
-<div class="pend-btn">
-          <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
-        </div>
-        <div class="pend-btn">
-          <a class="my-button" href=""><%= link_to "Dashboard", user_dashboard_path(@dashboard) %></a>
-        </div>

@@ -1,17 +1,5 @@
 
 <div class="form_container">
-  <%# <div class="mission-form">
-    <h1>Step 2</h1>
-    <br />
-      <h2>What languages do you need ?</h2>
-        <%= simple_form_for @mission, :url => update_step_three_path, :method => :post do |f| %>
-          <%# <%= simple_fields_for :language do |sk| %>
-            <%# <% sk.input :language, collection: Language.all %>
-          <%# <% end %>
-          <%# <%= f.hidden_field :query, value: @best %>
-          <%# <%= f.button :submit, "Next step"%>
-        <%# <% end %>
-  <%# </div> %>
 
   <div class="mission-form2">
     <div class="prog-space">
@@ -51,7 +39,7 @@
         <% end %>
           <div class="check-buttons">
             <div class="previous-step">
-              <p><%= link_to 'Previous step', edit_mission_path(@mission), class: "previous-link" %></p>
+              <p><%= link_to 'Previous step', new_mission_path, class: "previous-link" %></p>
             </div>
             <%= f.submit 'Next step', class: "next-link" %>
           </div>
