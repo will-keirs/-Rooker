@@ -89,12 +89,11 @@
   border-radius: 50%;
   text-align: center;
   background-color: #ccc;
-  // margin: 20px;
 }
 
 .activated {
   background-color: #3498db;
-  color: white;
+  // color: white;
 }
 
 .step-line {
@@ -103,7 +102,6 @@
   background-color: #ccc;
 
   &.active {
-    // height: 5px;
     background-color: #3498db;
   }
 }
@@ -124,11 +122,14 @@
 
 
 
+
+
 .check-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  position: relative;
+  left: -2%;
+  // display: flex;
+  // justify-content: start;
+  // gap: 15px;
 }
 
 .check-frame {
@@ -137,19 +138,12 @@
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 5px;
-  // margin-right: 15px;
-  // margin-bottom: 15px;
+  cursor: pointer;
+
   &.active {
     color: #666666;
     border: 2px solid #666666;
-    // border-color: blue;
   }
-}
-
-.test {
-  // display: none;
-  // background-color: none;
-  // border: red;
 }
 
 .clickable {
@@ -158,34 +152,24 @@
   align-items: center;
   padding: 15%;
 
-  p {
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 8px;
-  }
+  // .label {
+  //   font-size: 14px;
+  //   font-weight: 500;
+  //   margin-top: 30px;
+  // }
 }
+
+// .lab {
+//   margin-top: 30px;
+// }
 
 .check-buttons {
   display: flex;
   justify-content: end;
   margin-top: 40px;
-  padding-right: 10px;
-  gap: 15px;
+  gap: 25px;
 }
 
-// .next-step {
-//   display: flex;
-//   align-items: center; /* Center vertically */
-//   justify-content: center; /* Center horizontally */
-//   color: white;
-//   background-color: black;
-//   width: 16%;
-//   height: 40px;
-
-//   p {
-//     margin: 0px;
-//   }
-// }
 
 .previous-step {
   display: flex;
@@ -193,9 +177,9 @@
   justify-content: center; /* Center horizontally */
   color: white;
   background-color: black;
-  width: 16%;
+  width: 160px;
   height: 40px;
-
+  cursor: pointer;
 
   p {
     margin: 0px;
@@ -212,8 +196,9 @@
 .next-link {
   color: white;
   background-color: black;
-  width: 120px;
+  width: 160px;
   height: 40px;
+  border: none;
   text-decoration: none;
   outline: none;
   &:hover {

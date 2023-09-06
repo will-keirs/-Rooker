@@ -1,10 +1,11 @@
 
 <h1>Mission : <%= @mission.name %></h1>
+<div class="container">
 <div class="missionshow">
         <div class="mission-desc">
           <p><%= @mission.description %> </p>
         </div>
-        <div class="mission-datedom">
+        <div class="">
           <div class="mission-date">
             <h4>Date</h4>
             <p>from : <%= @mission.start_date %> to : <%= @mission.end_date %></p>
@@ -14,10 +15,10 @@
             <p><%= @mission.area %></p>
           </div>
         </div>
-        <div class="mission-langsoft">
+
+        <div class="">
           <div class="mission-lang">
             <h4>Languages</h4>
-
             <div class="lang-logos">
              <% @mission.languages.each do |language| %>
             <%= image_tag(language.langicon, size: "30x30")%>
@@ -29,11 +30,15 @@
             <% @mission.soft_skills.last(2).each do |soft_skill| %>
             <p><%= soft_skill.skill %> </p>
             <% end %>
+            <h4>Selected Devs</h4>
+            <% @mission.devs.each do |dev| %>
+            <p><%= dev.name %></p>
+            <% end %>
           </div>
         </div>
 
 </div>
-
+</div>
 <div class="pend-btn">
           <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
         </div>

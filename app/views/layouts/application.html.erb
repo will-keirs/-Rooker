@@ -35,12 +35,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
+  <body>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
-
-<%= render "shared/footer" %>
-
+    <%= render "shared/footer" %>
   </body>
 </html>

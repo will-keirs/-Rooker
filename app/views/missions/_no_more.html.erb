@@ -1,0 +1,35 @@
+<div data-controller="match"
+class="match-outer-card"
+data-match-index-value="<%= @best_index %>"
+data-match-mission-id-value="<%= @mission.id %>">
+ <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
+ <div class="basket">
+   <div class="basket-superpose">
+       <h2><strong>Your list :</strong></h2>
+       <% @mission.matches.each do |match| %>
+         <li class="basket-li">
+          <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', data: { target: 'match.next' }, class: "rounded-circle" %>
+          <%= match.dev.name %>
+         </li>
+       <% end %>
+   </div>
+ </div>
+ <div class="big-center">
+   <div class="match-dev-infos" style="min-height: 50vh; display: flex; justify-content: center; align-items: center;">
+   <h1> TA TOUT PRIS TABUSE !!!! 🧮 🎟 🧑 🚡 ✈ 🇦🇫 🛬 🛫 </h1>
+     <p data-match-target="selection"> </p>
+   </div>
+  </div>
+</div>
+<div class="button-div" >
+  <button><%= link_to "Reselect", edit_mission_path(@mission) %></button>
+  <button > <%=link_to "Selected profiles", mission_matches_path(@mission)  %></button>
+</div>
+
+</div>
+<button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
+<div>
+</div>
+
+ <button><%= link_to 'Back', :back %></button>
+</div>
