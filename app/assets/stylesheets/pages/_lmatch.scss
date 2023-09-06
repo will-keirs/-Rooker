@@ -97,6 +97,12 @@ z-index: 1;
 
   z-index: 1;
 }
+.tooltip-flex{
+  display: flex;
+    p{
+      padding: 8px;
+    }
+  }
 // @dev.languages.includes?(@mission.languages)
 //   dev +3pts => la raie => laraie.order
 //   1
