@@ -6,30 +6,36 @@
         </div>
         <div class="border-div">
           <div class="dev-inner-card-col">
-              <h5><strong>Infos:</strong></h5>
-              <h5><strong><%= link_to match.dev.name, match_path(match) %></strong></h5>
-              <p><%= match.dev.diploma %></p>
-              <p><%= match.dev.location %></p>
-          </div>
+              <h4><strong>Infos:</strong></h4>
+                <div class="pad-title-content">
+                  <h5><strong><%= link_to match.dev.name, match_path(match) %></strong></h5>
+                  <p><%= match.dev.diploma %></p>
+                  <p><%= match.dev.location %></p>
+                </div>
+           </div>
         </div>
         <div class="border-div">
           <div class="dev-inner-card-col">
-                <h5><strong>Languages:</strong></h5>
-            <% match.dev.languages.first(3).each do |l| %>
-                <ul>
+            <h4><strong>Languages:</strong></h4>
+              <div class="pad-title-content">
+                <% match.dev.languages.first(3).each do |l| %>
+                 <ul>
                   <li><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
                 </ul>
               <% end %>
+            </div>
           </div>
         </div>
         <div class="border-div">
           <div class="dev-inner-card-col soft">
-          <h5><strong>Soft skills:</strong></h6>
-            <% match.dev.soft_skills.first(3).each do |sk| %>
-              <ul>
-                <li><%= sk.skill %></li>
-              </ul>
-            <% end %>
+          <h4><strong>Soft skills:</strong></h4>
+          <div class="pad-title-content">
+              <% match.dev.soft_skills.first(3).each do |sk| %>
+                <ul>
+                  <li><strong><%= sk.skill %></strong></li>
+                </ul>
+              <% end %>
+            </div>
           </div>
         </div>
         <div class="border-div">
@@ -40,10 +46,10 @@
                   <% else %>
                     <%= image_tag("false.png",  :height =>"20", :width => "20", class: "rounded-circle") %>
                   <% end %>
-                  <h5 class="glow"><strong>Chat</strong></h5>
+                  <h4 class="glow"><strong>Chat</strong></h4>
               </div>
             </div>
-            <div class="border-div">
+            <div class="border-div-vote">
               <div class="dev-inner-card-vote">
                   <p><strong><%= match.dev.upvote %></strong></p>
                   <%= image_tag("upvote.png",  :height =>"30", :width => "30", :class => "glow") %>

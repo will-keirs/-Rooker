@@ -7,4 +7,5 @@ class Mission < ApplicationRecord
   has_many :langtypes
   has_many :languages, through: :devlangmissions
   has_many :soft_skills, through: :devsoftmissions
+  validates :name, :area, :location, :description, presence: true
 end

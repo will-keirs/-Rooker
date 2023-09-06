@@ -3,10 +3,11 @@
    data-match-dev-value="<%= @best %>"
    data-match-index-value="<%= @best_index %>"
    data-match-mission-id-value="<%= @mission.id %>">
-    <h1 id="main-title"><strong><%= @mission.name %></strong></h1>
+    <div class="match-title"><h1 id="main-title"><strong>Mission: <%= @mission.name %></strong></h1>
+    </div>
     <div class="basket">
       <div class="basket-superpose">
-          <h2><strong>Your list :</strong></h2>
+          <h2><strong>Your devs :</strong></h2>
           <% @mission.matches.each do |match| %>
             <li class="basket-li">
              <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', data: { target: 'match.next' }, class: "rounded-circle" %>
@@ -33,7 +34,7 @@
               } do |f| %>
               <%= f.hidden_field :best_index, value: @best_index %>
               <%= f.hidden_field :selected_dev_id, value: @dev.id %>
-              <%= f.submit "Select" %>
+              <%= f.submit "Select", :class => 'btn btn-success btn-lg' %>
             <% end %>
 
 
@@ -42,9 +43,10 @@
               action: "submit->match#next"
               } do |f| %>
               <%= f.hidden_field :best_index, value: @best_index %>
-              <%= f.submit "Next" %>
+              <%= f.submit "Next", :class => 'btn btn-danger btn-lg' %>
             <% end %>
           </div>
+
         </div>
       <div  class="dev-details">
       <div >
@@ -56,11 +58,11 @@
       <div>
         <h4><strong>Links</strong></h4>
            <div class="dev-links-icons">
-              <a href= "<%= @dev.github_link %>" ><i class="fab fa-github glow fa-3x"></i></a>
-              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-instagram glow fa-3x"></i></a>
-              <a href= "<%= @dev.website_link %>"><i class="fab fa-facebook glow fa-3x"></i></a>
-              <a href= "<%= @dev.twitter_link %>"><i class="fab fa-twitter glow fa-3x"></i></a>
-              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-linkedin glow fa-3x"></i></a>
+              <a href= "<%= @dev.github_link %>" ><i class="fab fa-github glow fa-2x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-instagram glow fa-2x"></i></a>
+              <a href= "<%= @dev.website_link %>"><i class="fab fa-facebook glow fa-2x"></i></a>
+              <a href= "<%= @dev.twitter_link %>"><i class="fab fa-twitter glow fa-2x"></i></a>
+              <a href= "<%= @dev.linkedin_link %>"><i class="fab fa-linkedin glow fa-2x"></i></a>
            </div>
       </div>
       <div >
@@ -70,9 +72,9 @@
       </div>
       <div class="skill-div">
         <h4><strong>Languages</strong></h4>
-        <div>
+        <div class="tooltip-flex">
             <% @dev.languages.each do |language| %>
-              <%= image_tag(language.langicon, size: "30x30")%>
+              <p data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%></p>
             <% end %>
         </div>
       </div>
@@ -94,26 +96,15 @@
       </div>
       </div >
       <div class="button-div" >
-        <button><%= link_to "Reselect", edit_mission_path(@mission) %></button>
-        <button > <%=link_to "Selected profiles", mission_matches_path(@mission)  %></button>
+        <%=link_to "Selected profiles", mission_matches_path(@mission), :class => 'btn btn-dark btn-lg'    %>
       </div>
       </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
   </div>
-  <button><%= link_to "VOS PROFILS", mission_matches_path(@mission) %></button>
   <div>
   </div>
 
-    <button><%= link_to 'Back', :back %></button>
+<%= link_to 'Back', :back, :class => 'btn btn-dark'  %>
 </div>

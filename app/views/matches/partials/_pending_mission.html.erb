@@ -1,6 +1,6 @@
-      <div class="pending-nav" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://dailygeekshow.com/wp-content/uploads/2020/01/une-matrix-recette.jpg);">
+      <div class="pending-nav" >
         <div class="pend-text">
-          <h1 class="megatitle"><%= @mission.name %></h1>
+          <h1><%= @mission.name %></h1>
         </div>
         <div class="pend-btn">
           <a class="my-button" href=""><%= link_to "Back to Match", match_landing_path(@mission) %></a>
@@ -12,6 +12,7 @@
 
       <div class="mission-specs">
         <div class="mission-desc">
+          <h4>Description</h4>
           <p><%= @mission.description %> </p>
         </div>
         <div class="mission-datedom">
@@ -28,17 +29,19 @@
           <div class="mission-lang">
             <h4>Languages</h4>
 
-            <div class="lang-logos">
-             <% @mission.languages.each do |language| %>
-            <%= image_tag(language.langicon, size: "30x30")%>
-            <% end %>
-            </div>
+          <div class="lang-logos">
+             <% @mission.languages.first(8).each do |language| %>
+               <%= image_tag(language.langicon, size: "40x40")%>
+              <% end %>
+          </div>
           </div>
           <div class="mission-soft">
             <h4>Soft skills</h4>
-            <% @mission.soft_skills.last(2).each do |soft_skill| %>
-            <p><%= soft_skill.skill %> </p>
-            <% end %>
+            <div class="mission-soft-column">
+              <% @mission.soft_skills.last(6).each do |soft_skill| %>
+              <p><strong><%= soft_skill.skill %></strong> </p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
