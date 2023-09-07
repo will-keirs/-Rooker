@@ -60,9 +60,10 @@
         </div>
       </div>
       <div class="form-gr-btn">
-          <%= f.submit 'Next step', class: 'elboton' %>
+        <%= link_to "Dashboard", user_dashboard_path(@dashboard), class:"elotroboton" %>
+        <%= f.submit 'Next step', class: 'elboton' %>
       </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
 

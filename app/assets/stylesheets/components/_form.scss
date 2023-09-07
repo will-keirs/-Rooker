@@ -239,3 +239,23 @@
     color: #21E6C1;
   }
 }
+
+.elotroboton {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white;
+  background-color: #071E3D;
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 95px;
+  text-decoration: none;
+
+  p {
+    margin: 0px;
+  }
+  &:hover {
+    color: #21E6C1;
+  }
+}
