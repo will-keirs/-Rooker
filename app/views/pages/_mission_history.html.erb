@@ -29,7 +29,7 @@
             <div>
               <ul class="tooltip-flex">
               <% mission.languages.each do |language| %>
-                  <li style="list-style:none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%> </li>
+                  <li style="list-style:none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "35x35")%> </li>
                <% end %>
               </ul>
             </div>
