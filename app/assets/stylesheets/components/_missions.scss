@@ -31,13 +31,15 @@
 .missionname {
   background-color: #dbd9d9;
   padding: 15px;
-  width: 400px;
+  width: 100%;
+  height: 80px;
 }
 
 .go {
   background-color: black;
   color: white;
   width: 60px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +56,7 @@
 .namego {
   display:flex;
   justify-content: space-between;
+  margin-bottom: -10%;
 }
 
 .favoris {
