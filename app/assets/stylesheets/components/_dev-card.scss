@@ -57,6 +57,7 @@
   justify-content: center;
   padding-left: 15px;
   img{
+    flex-direction: row;
     margin-left: 15px;
   }
 }
@@ -91,4 +92,11 @@
  }
  .pad-title-content {
   padding: 10px;
+ }
+
+ .pad-title-content-title{
+  display: flex;
+  padding: 10px;
+  padding-top: 20px;
+  margin-left: -40px;
  }

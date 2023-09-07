@@ -3,7 +3,7 @@
        <%= image_tag( @dev.photo, size: "450*450", class: "rounded-circle") %>
     <%# image %>
     </div>
-    <div class="dev-infos">
+    <div class="dev-infos" data-controller="upvote">
       <h1><strong><%= @dev.name %></strong></h1>
       <h4><%= @dev.diploma %></h4>
       <div class="dev-links">
@@ -21,8 +21,8 @@
         <p><%= @dev.description %></p>
       </div>
       <div class="dev-upvote">
-          <h4><strong><%= @dev.upvote %></strong></h4>
-          <%= image_tag("upvote.png", class: "glow",  :height =>"40", :width => "40") %>
+          <h4 data-upvote-target="targette"><strong><%= @dev.upvote %></strong></h4>
+          <li style="list-style:non" data-upvote-target="targetteur" data-action="click->upvote#click"><%= image_tag("upvote.png", class: "glow",  :height =>"40", :width => "40") %> </li>
       </div>
     </div>
     <div class="dev-my-comment">

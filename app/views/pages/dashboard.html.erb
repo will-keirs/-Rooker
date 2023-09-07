@@ -1,90 +1,29 @@
-<h1>Your dashboard</h1>
 <div class="container">
   <div class="createmission">
     <div class="newmission"><%= link_to "Create a new mission", new_mission_path(@mission) %>
     </div>
   </div>
-  <div class="misfavs">
-    <div class="missions">
-     <h2>Missions</h2>
+  <div class="flex-fav-histo">
+    <div class="misfavs">
+      <div class="missions">
+      <h2>Missions</h2>
         <% @missions.last(3).each do |mission| %>
           <div class="namego">
             <p class="missionname"><strong><%= link_to mission.name, mission_path(mission) %></strong></p>
             <p class="go"><%= link_to "Go", mission_path(mission) %></p>
-          </div>
+      </div>
         <% end %>
     </div>
     <div class="favoris">
-      <h2>Favorites</h2>
-      <ul>
-        <% current_user.matches.last(3).each do |match| %>
-          <li>
-            <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', class: "rounded-circle" %>
-            <%= match.dev.name %>
-          </li>
-        <% end %>
-      </ul>
+        <%= render "favorites", locals: {current_user: current_user, mission: @mission} %>
     </div>
-  </div>
+   </div>
+</div>
+</div>
 
-  <div>
+  <div class="history-container-dashboard">
     <h2> History </h2>
     <div class="custom-container">
-
-      <% @missions.each do |mission| %>
-        <div class="history-comp">
-
-          <div class="hist-elmnt1">
-            <h4><%= link_to mission.name, mission_path(mission) %></h4>
-            <p><%= mission.description %></p>
-          </div>
-
-          <div class="hist-elmnt2">
-            <div class="soft-elmnt">
-              <h4>Soft skills</h4>
-              <% mission.soft_skills.last(3).each do |soft_skill| %>
-                <p><%= soft_skill.skill %> </p>
-              <% end %>
-            </div>
-          </div>
-
-
-          <div class="hist-elmnt3">
-            <div class="date-elmnt">
-              <h4> Date</h4>
-              <p>From <%= mission.start_date %> to <%= mission.end_date %></p>
-            </div>
-          </div>
-
-          <div class="hist-elmnt4">
-            <div>
-              <h4>Languages</h4>
-            </div>
-            <div>
-              <ul>
-              <% mission.languages.each do |language| %>
-                  <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%> </li>
-               <% end %>
-              </ul>
-            </div>
-          </div>
-          <div class="hist-elmnt5">
-            <div>
-              <h4>Devs</h4>
-            </div>
-            <div class="dev-elmnt">
-              <% mission.devs.each do |dev| %>
-                  <% if dev.photo.present? %>
-                    <%= image_tag (dev.photo), size: "40X40", class:"rounded-circle" %>
-                  <% end %>
-              <% end %>
-            </div>
-            <div class="rematch">
-              <p><%= link_to "Go to rematch", match_landing_path(mission.id) %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
+        <%= render "mission_history", locals: {missions: @missions} %>
     </div>
   </div>
-</div>

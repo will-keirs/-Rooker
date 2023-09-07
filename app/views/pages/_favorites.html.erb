@@ -1,0 +1,26 @@
+<h2>Favorites</h2>
+<div class="fav-component">
+      <ul>
+        <% current_user.matches.last(3).each do |match| %>
+          <li>
+           <div class="fav-component-row">
+            <div class="fav-component-avatar">
+              <%= link_to image_tag( match.dev.photo, style: 'height:50px;width:50px;', class: "rounded-circle bubu"), match_path(match) %>
+            </div>
+            <div class="fav-component-infos">
+               <h6><strong><%= match.dev.name %></strong></h6>
+               <h6 ><%= match.dev.diploma %></h6>
+               <h6><%= match.dev.location %></h6>
+            </div>
+              <ul>
+            <div class="fav-component-languages">
+                <% match.dev.languages.first(5).each do |l| %>
+                  <li style="list-style:none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(l.langtype, "review") %>"><%= image_tag(l.langicon, size: "30x30")%> </li>
+                <% end %>
+            </div>
+              </ul>
+          </div>
+          </li>
+        <% end %>
+      </ul>
+</div>

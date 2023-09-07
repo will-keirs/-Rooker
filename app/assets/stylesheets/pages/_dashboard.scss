@@ -8,6 +8,7 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .newmission a{
@@ -25,4 +26,21 @@
 .hist-elmnt1 a {
   text-decoration: none;
   color: black;
+}
+
+.history-recap{
+  width: fit-content;
+}
+
+.history-container-dashboard{
+  width: 90%;
+  background-color: #EBEBEB;
+  padding: 20px;
+margin-right: 100px;
+margin-left: 100px;
+}
+
+.flex-fav-histo{
+  display: flex;
+  justify-content: center;
 }
