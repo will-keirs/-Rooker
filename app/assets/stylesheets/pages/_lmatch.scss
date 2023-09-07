@@ -17,10 +17,13 @@
   background-color: white;
   margin:  20px 0px 20px 0px ;
   border-right: 1px solid black;
-  padding: 20px;
   justify-content: center;
   width: 100%;
   display: grid;
+  img{
+    margin-top: 5vmin;
+  }
+
 }
 
 .dev-details {
@@ -83,14 +86,6 @@
   font-size: 12px;
 }
 
-.superpose {
-  position: relative;
-}
-
-.superpose_child {
-position: absolute;
-z-index: 1;
-}
 
 .basket {
   position: relative;
@@ -128,5 +123,15 @@ z-index: 1;
     width: 226px;
     h2 {
       font-size: 2.2rem !important;
+    }
+  }
+
+  .dev-upvote{
+    display: flex;
+    flex-direction: row;
+    // padding: 10px;
+    justify-content: flex-end;
+    strong{
+      padding-right: 2vmin;
     }
   }
