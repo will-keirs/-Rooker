@@ -1,6 +1,6 @@
   <div class="dev-header">
     <div class="dev-avatar">
-       <%= image_tag( @dev.photo, size: "450*450", class: "rounded-circle") %>
+       <%= image_tag( @dev.photo, size: "400*400", class: "rounded-circle") %>
     <%# image %>
     </div>
     <div class="dev-infos" data-controller="upvote">
@@ -21,42 +21,38 @@
         <p><%= @dev.description %></p>
       </div>
       <div class="dev-upvote">
-          <h4 data-upvote-target="targette"><strong><%= @dev.upvote %></strong></h4>
-          <li style="list-style:non" data-upvote-target="targetteur" data-action="click->upvote#click"><%= image_tag("upvote.png", class: "glow",  :height =>"40", :width => "40") %> </li>
+          <h2><strong data-upvote-target="targette"><%= @dev.upvote %></strong></h2>
+          <li style="list-style:none" data-upvote-target="targetteur" data-action="click->upvote#click"><%= image_tag("upvote.png", class: "glow", :height =>"30", :width => "30") %> </li>
       </div>
     </div>
     <div class="dev-my-comment">
       <h4><strong>Your comment:</strong></h4>
-      <% if @match.comment.present? %>
          <p><%= @match.comment %></p>
-      <% else %>
-         <p>You didn't write a note yet</p>
-         <button>Add Note</button>
-      <% end %>
     </div>
   </div>
   <div class="dev-missions">
     <div class="dev-missions-it">
-        <h2><strong>Worked on: </strong></h2>
-      <% @dev.missions.each do |mission| %>
-        <li><strong><%= link_to mission.name, mission_path(mission) %></strong></li>
+       <h2><strong>Worked on:   </strong></h2>
+      <% @dev.missions.each do |mission|%>
+       <li><strong> <%=link_to mission.name, mission_path(mission)%> | </strong></li>
       <% end %>
     </div>
   </div>
   <div class="dev-body">
+  <div class="background-dev-profile">
     <div class="dev-langs-container">
-        <h2><strong>Languages </strong></h2>
+        <h2 class="title-center-profile-dev"><strong>Languages </strong></h2>
         <div class="dev-langs">
 
           <% @dev.languages.each do |l| %>
               <ul>
-                <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(l.langtype, "review") %>"><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
+                <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(l.langtype, "review") %>"><%= image_tag( l.langicon,  :height => "40", :width => "40", class: "rounded-circle") %></li>
               </ul>
             <% end %>
           </div>
       </div>
       <div class="dev-softs-container">
-        <h2><strong>Soft skills </strong></h2>
+        <h2 class="title-center-profile-dev"><strong>Soft skills </strong></h2>
         <div class="dev-softs">
             <% @dev.soft_skills.each do |sk| %>
               <ul>
@@ -64,7 +60,8 @@
               </ul>
             <% end %>
         </div>
-      </div>
+     </div>
+ </div>
     <%# dev language , dev skills  %>
     </div>
     <div class="dev-contact"
