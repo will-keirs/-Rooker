@@ -206,9 +206,24 @@ display: flex;
   padding: 20px;
 }
 
-.white {
-  color: rgb(72, 72, 72);
+
+.select-button {
+  background-color:#278EA5;
+  padding: 12px;
+  color: white;
+  border-style : none;
+  border-radius: 5%;
+  font-weight: bold;
 }
+
+.next-button {
+  background-color:#1F4287;
+  padding: 12px;
+  color: white;
+  border-style : none;
+  border-radius: 5%;
+  font-weight: bold;
+
 
 .background-dev-profile{
   background-color: #D6DBE5;
