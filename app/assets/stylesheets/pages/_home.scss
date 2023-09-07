@@ -56,15 +56,37 @@ p {
   color: white;
 }
 
-.btn-gradient {
-  color: white;
-  padding: 200px;
-  width: 400px;
-  border-radius: 4px;
-  font-weight: bolder;
-  background: linear-gradient(#ffffff, #e7e8e8);
-  transition: background 0.3s ease;
-  border: 1px solid #cccbcb;
+// .btn-gradient {
+//   color: white;
+//   padding: 200px;
+//   width: 400px;
+//   border-radius: 4px;
+//   font-weight: bolder;
+//   background: linear-gradient(#ffffff, #e7e8e8);
+//   transition: background 0.3s ease;
+//   border: 1px solid #cccbcb;
+// }
+
+.boton {
+  margin-left: 102px;
+  padding-left: 24px;
+  margin-top: 50px;
+}
+
+
+.lolosbtn {
+  color: #071E3D;
+  background-color: #21E6C1;
+  // width: 160px;
+  // height: 40px;
+  padding: 12px 50px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    color: white;
+  }
+
 }
 
 .btn-gradient:hover {

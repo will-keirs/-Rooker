@@ -32,8 +32,8 @@
             <div class="form-gr-name">
               <%= f.input :name, label: false, :placeholder => "Mission name", input_html: { class: 'form-control' }%>
             </div>
-            <div class="form-gr-desc">
-                <%= f.input :description, label: false, :placeholder =>"Describe your mission here..."%>
+            <div class="titopuente">
+                <%= f.input :description, label: false, placeholder: "Describe your mission here...",  input_html: { rows:"9" } %>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="form-gr-btn">
-          <%= f.button :submit, 'Next step', class: 'sub-btn' %>
+          <%= f.submit 'Next step', class: 'elboton' %>
       </div>
     <% end %>
   </div>
