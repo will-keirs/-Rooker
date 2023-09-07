@@ -10,7 +10,6 @@
             <h2><strong>Your devs :</strong></h2>
         </div>
       <div class="basket-superpose">
-
           <% @mission.matches.each do |match| %>
             <li class="basket-li">
              <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', data: { target: 'match.next' }, class: "rounded-circle" %>
