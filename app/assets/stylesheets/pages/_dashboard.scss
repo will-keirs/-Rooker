@@ -17,13 +17,38 @@
   gap: 3%;
 }
 
+.titulo-miss {
+  position: relative;
+  margin-bottom: -38px;
+}
+
+.titulo-favs {
+  position: relative;
+  margin-bottom: -2px;
+}
+
+.linea {
+  position: absolute;
+  content: "";
+  top: 44px;
+  left: 0px;
+  width: 139px;
+  height: 5px;
+  background-color: #21E6C1;
+}
+
 .frame-tres {
   display: flex;
   flex-direction: column;
   align-self: center;
   width: 90%;
   margin: 30px 0px;
+}
 
+.titulo {
+  position: relative;
+  margin-left: 1.5%;
+  margin-top: 2%;
 }
 
 .new-miss-frame {
