@@ -27,7 +27,7 @@ display: flex;
   flex-direction: row;
   gap: 30px;
     i{
-      color: black;
+      color: #071E3D;
     }
 
 }
@@ -38,19 +38,20 @@ display: flex;
   // padding: 10px;
   justify-content: flex-end;
   img{
-    margin-left: 20px;
+    margin-left: 15px;
+    z-index: 1;
   }
   h4{
-    // margin-top: 10px;
+    margin-top: 25px;
   }
 }
 
 .dev-avatar{
-  background-color: rgb(213, 213, 213);
+  background-color: #D6DBE5;
 
   padding: 10px;
     img{
-      border: 1px solid rgb(213, 213, 213);
+      border: 2px solid rgb(213, 213, 213);
     }
 }
 
@@ -62,8 +63,9 @@ display: flex;
 
 .dev-infos {
   padding: 30px;
-  background-color: rgb(177, 177, 177);
-  flex-grow: 2;
+  flex-grow: 1;
+  background-color: #ebebeb;
+  box-shadow:0px 0px 0px 10px #D6DBE5 inset;
 }
 
 .dev-infos h1{
@@ -74,18 +76,26 @@ display: flex;
 }
 
 .dev-my-comment{
-  background-color: rgb(213, 213, 213);
+  background-color: #D6DBE5;
   padding: 20px;
   padding-top: 50px;
   flex-grow: 1.5;
 }
 
 .dev-missions{
-  background-color: rgb(231, 230, 230);
+  margin-top: 20px;
+  background-color: #D6DBE5;
   display: flex;
   flex-direction: column;
     h2{
       margin: 10px;
+      justify-self: flex-start;
+    }
+    .li{
+      color: #071E3D;
+    }
+    li a{
+      color: #071E3D;
     }
 }
 .dev-missions-it{
@@ -104,13 +114,16 @@ display: flex;
 }
 
 .dev-body{
+  margin: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   column-count: 2;
-  background-color: rgb(213, 213, 213);
+  background-color: white;
 }
 
 .dev-langs-container {
+  margin-top: 20px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   h2{
@@ -121,6 +134,7 @@ display: flex;
 .dev-langs{
   display: flex;
   padding: 10px;
+  padding-left: 10px;
 
   li {
 
@@ -129,6 +143,8 @@ display: flex;
 }
 
 .dev-softs-container {
+  width: 80%;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   h2{
@@ -146,25 +162,28 @@ display: flex;
   padding: 20px;
   display: flex;
   flex-direction: row;
-  background-color: rgb(176, 173, 173);
+  background-color: #D6DBE5;
   justify-content: space-evenly;
   .pin{
     border: 1px solid rgb(81, 81, 81);
-    margin-bottom: 15px;
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-right: 10px;
   }
 }
 
-.dev-contact image_tag
 
 .avail-chat {
-
+  padding-top: 50px;
   display: flex;
+  flex-direction: row;
+  h3{
+    padding-top: 5px;
+  }
+
 }
 
 .dev-mail{
   padding-top: 17px;
+  margin-left: 20px;
 }
 
 .dev-mail-text{
@@ -183,9 +202,10 @@ display: flex;
 }
 
 .missionshow {
-  background-color: #EBEBEB;
+  background-color: #F6F6F6;
   padding: 20px;
 }
+
 
 .select-button {
   background-color:#278EA5;
@@ -203,4 +223,14 @@ display: flex;
   border-style : none;
   border-radius: 5%;
   font-weight: bold;
+
+
+.background-dev-profile{
+  background-color: #D6DBE5;
+  display: flex;
+}
+
+.title-center-profile-dev {
+  display: flex;
+  justify-content: center;
 }
