@@ -35,7 +35,7 @@
   height: 40px;
   justify-content: space-around;
   display: flex;
-  margin: -120px;
+  margin: -50px;
 }
 
 .big-center {
@@ -60,6 +60,19 @@
 .button-div {
   display: flex;
   justify-content: space-around;
+}
+
+.skill-div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  p {
+    padding-top: 3px;
+  }
+  li {
+    padding: 3px;
+    list-style: none;
+  }
 }
 
 .skill-div ul {
@@ -104,5 +117,16 @@ z-index: 1;
   display: flex;
     p{
       padding: 8px;
+    }
+  }
+
+  .title-basket {
+    background-color: rgba(174, 171, 171, 0.3);
+    display: grid;
+    margin-left: 50px;
+    padding-left: 2px;
+    width: 226px;
+    h2 {
+      font-size: 2.2rem !important;
     }
   }
