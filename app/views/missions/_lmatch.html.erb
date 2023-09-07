@@ -37,7 +37,7 @@
               } do |f| %>
               <%= f.hidden_field :best_index, value: @best_index %>
               <%= f.hidden_field :selected_dev_id, value: @dev.id %>
-              <%= f.submit "Select", :class => 'btn btn-success btn-lg' %>
+              <%= f.submit "Select", :class => 'select-button' %>
             <% end %>
 
 
@@ -46,7 +46,7 @@
               action: "submit->match#next"
               } do |f| %>
               <%= f.hidden_field :best_index, value: @best_index %>
-              <%= f.submit "Next", :class => 'btn btn-danger btn-lg' %>
+              <%= f.submit "Next", :class => 'next-button' %>
             <% end %>
           </div>
 
