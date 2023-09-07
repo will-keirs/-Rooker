@@ -6,8 +6,11 @@
     <div class="match-title"><h1 id="main-title"><strong>Mission: <%= @mission.name %></strong></h1>
     </div>
     <div class="basket">
+    <div class="title-basket">
+            <h2><strong>Your devs :</strong></h2>
+        </div>
       <div class="basket-superpose">
-          <h2><strong>Your devs :</strong></h2>
+
           <% @mission.matches.each do |match| %>
             <li class="basket-li">
              <%= image_tag match.dev.photo , style: 'height:40px;width:40px;', data: { target: 'match.next' }, class: "rounded-circle" %>
@@ -92,7 +95,7 @@
         <p><strong>Area: </strong><%=@dev.area %></p>
         <div class="dev-upvote">
           <h4><strong><%= @dev.upvote %></strong></h4>
-          <%= image_tag("upvote.png", class: "glow",  :height =>"40", :width => "40") %>
+          <%= image_tag("upvote.png", class: "glow",  :height =>"24", :width => "24") %>
       </div>
       </div >
       <div class="button-div" >
@@ -100,11 +103,9 @@
       </div>
       </div>
     </div>
-
-
   </div>
   <div>
   </div>
+<%= link_to 'Back', user_dashboard_path, :class => 'btn btn-dark'  %>
 
-<%= link_to 'Back', :back, :class => 'btn btn-dark'  %>
 </div>
