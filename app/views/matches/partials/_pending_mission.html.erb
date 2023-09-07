@@ -31,7 +31,7 @@
 
           <div class="lang-logos">
              <% @mission.languages.first(8).each do |language| %>
-               <%= image_tag(language.langicon, size: "40x40")%>
+               <p style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "40x40")%></p>
               <% end %>
           </div>
           </div>

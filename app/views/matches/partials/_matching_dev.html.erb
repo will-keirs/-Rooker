@@ -17,10 +17,10 @@
         <div class="border-div">
           <div class="dev-inner-card-col">
             <h4><strong>Languages:</strong></h4>
-              <div class="pad-title-content">
-                <% match.dev.languages.first(3).each do |l| %>
+              <div class="pad-title-content-title">
+                <% match.dev.languages.first(2).each do |l| %>
                  <ul>
-                  <li><%= image_tag( l.langicon,  :height => "30", :width => "30", class: "rounded-circle") %></li>
+                  <li style="list-style: none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(l.langtype, "review") %>"><%= image_tag( l.langicon,  :height => "40", :width => "40") %></li>
                 </ul>
               <% end %>
             </div>

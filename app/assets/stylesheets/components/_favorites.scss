@@ -1,0 +1,45 @@
+
+.favoris{
+}
+
+.fav-component{
+  margin-top: 40px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  li{
+    margin-bottom: 16px;
+  }
+}
+.fav-component-row{
+  padding: 10px;
+  background-color: #dbd9d9;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.fav-component-avatar {
+ display: flex;
+ justify-content: flex-start;
+}
+.fav-component-infos{
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-top: 3px;
+  margin-right: 32px;
+  margin-top: 5px;
+  h6{
+    margin-top: -10px;
+  }
+}
+.fav-component-languages{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  img{
+    padding-left: 5px;
+  }
+}

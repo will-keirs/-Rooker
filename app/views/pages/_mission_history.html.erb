@@ -1,0 +1,51 @@
+   <% @missions.each do |mission| %>
+        <div class="history-comp">
+
+          <div class="hist-elmnt1">
+            <h4><%= link_to mission.name, mission_path(mission) %></h4>
+            <p><%= mission.description %></p>
+          </div>
+
+          <div class="hist-elmnt2">
+            <div class="soft-elmnt">
+              <h4>Soft skills</h4>
+              <% mission.soft_skills.last(3).each do |soft_skill| %>
+                <p><%= soft_skill.skill %> </p>
+              <% end %>
+            </div>
+          </div>
+
+
+          <div class="hist-elmnt3">
+            <div class="date-elmnt">
+              <h4> Date</h4>
+              <p>From <%= mission.start_date %> to <%= mission.end_date %></p>
+            </div>
+          </div>
+
+          <div class="hist-elmnt4">
+            <div>
+              <h4>Languages</h4>
+            </div>
+            <div>
+              <ul class="tooltip-flex">
+              <% mission.languages.each do |language| %>
+                  <li style="list-style:none" data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="<%= pluralize(language.langtype, "review") %>"><%= image_tag(language.langicon, size: "30x30")%> </li>
+               <% end %>
+              </ul>
+            </div>
+          </div>
+          <div class="hist-elmnt5">
+            <div>
+              <h4>Devs</h4>
+            </div>
+            <div class="dev-elmnt">
+              <% mission.devs.each do |dev| %>
+                  <% if dev.photo.present? %>
+                    <%= image_tag (dev.photo), size: "40X40", class:"rounded-circle" %>
+                  <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
