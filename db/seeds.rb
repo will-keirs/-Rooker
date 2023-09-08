@@ -57,16 +57,16 @@ mission2 = Mission.new(
 mission2.save!
 dev1 = Dev.new(
   name: "Antoine",
-  email: "johnny@johnny.com",
+  email: "antoine@gmail.com",
   availability: false,
   password: "123456",
   phone: "0102030405",
-  area: "agriculture",
+  area: "Education",
   upvote: 10,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=13",
-  description: "J'aime coder pour la science, c'est mon dada! J'ai la chance d'avoir travailler sur de nombreuses missions et je suis prêt à m'occuper de la votre. ",
+  photo: "Antoine.jpg",
+  description:"I love coding for science; it's my passion! I've been fortunate to work on numerous missions and I'm ready to take on yours.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -77,16 +77,16 @@ dev1 = Dev.new(
 dev1.save!
 dev2 = Dev.new(
   name: "Jean-Loup",
-  email: "lucy@lucy.com",
+  email: "jean-loup@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
-  area: "energy",
+  area: "Energy",
   upvote: 45,
-  location: "Lyon",
-  diploma: "Le Wagon 2020",
-  photo: "https://loremflickr.com/320/240?random=12",
-  description: "Je suis teacher au Wagon depuis plusieurs années et j'ai travaillé sur de nombreux projets ambitieux. Je cherche de nouvelles opportunités.",
+  location: "Marseille",
+  diploma: "Le Wagon 2023",
+  photo: "JeanLoup.jpg",
+  description: "I've been a teacher at Le Wagon for several years and have worked on many ambitious projects. I'm seeking new opportunities. Passionate about sailing.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -97,16 +97,16 @@ dev2 = Dev.new(
 dev2.save!
 dev3 = Dev.new(
   name: "Dylane",
-  email: "emily@emily.com",
-  availability: false,
+  email: "dylane@gmail.com",
+  availability: true,
   password: "123456",
   phone: "0102030407",
-  area: "healthcare",
+  area: "Healthcare",
   upvote: 4,
   location: "Marseille",
-  diploma: "Le Wagon 2018",
-  photo: "https://loremflickr.com/320/240?random=11",
-  description: "Dylane, développeur depuis plusieurs années. J'aime relever des challenges complexes et lancer des projets fous. ",
+  diploma: "Le Wagon 2023",
+  photo: "Dylane.jpg",
+  description: "Dylane, a developer for several years. I enjoy tackling complex challenges and launching ambitious projects. A fan of rap music.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -117,16 +117,16 @@ dev3 = Dev.new(
 dev3.save!
 dev4 = Dev.new(
   name: "Maewenn",
-  email: "anthony@anthony.com",
+  email: "maewenn@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030408",
-  area: "communication",
+  area: "Communication",
   upvote: 10,
-  location: "Paris",
-  diploma: "Le Wagon 2019",
-  photo: "https://loremflickr.com/320/240?random=10",
-  description: "Directrice d'une école de développement, je continue de travailler sur de nombreuses missions web. J'accompagne des entreprises et je suis disponible dans les prochaines semaines pour de nouvelles aventures.",
+  location: "Marseille",
+  diploma: "Le Wagon 2023",
+  photo: "Maeween.jpg",
+  description: "As the director of a coding school, I continue to work on various web missions. I support businesses and am available in the coming weeks for new adventures.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -137,18 +137,17 @@ dev4 = Dev.new(
 dev4.save!
 
 dev5 = Dev.new(
-  name: "Clara",
-  email: "clara@clara.com",
+  name: "Baptiste",
+  email: "baptiste@gmail.com",
   availability: false,
   password: "123456",
   phone: "0102030405",
-  area: "Healthcare",
+  area: "Archeology",
   upvote: 10,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=9",
-  description: "Coucou à tous, je suis super impatiente de commencer cette formation avec vous tous !
-  Je suis Podologue depuis deux ans et participe à cette formation afin de diversifier mon activité. Ce sera, j'en suis sure, l'occasion d'acquérir des tas de connaissances et de faire de super rencontres :D",
+  photo: "Baptiste.jpg",
+  description: "Passionate junior web developer who prioritizes collaboration and adaptability. I'm a video game and manga enthusiast.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -158,17 +157,17 @@ dev5 = Dev.new(
 )
 dev5.save!
 dev6 = Dev.new(
-  name: "Thomas",
-  email: "thomas@lucy.com",
+  name: "Flavien",
+  email: "flavien@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
-  area: "Energy",
+  area: "Communication,",
   upvote: 45,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=8",
-  description: "Bonjour, j'ai 23 ans j'étais parti pour être enseignant de mathématiques mais les expériences du métiers m'en ont quelque peu dissuadé. Mon cursus d'étude m'ayant permis de découvrir la programmation et de m'y donner goût j'ai décidé de reconvertir dans une voie plus exigeante, plus pénible mais beaucoup plus intéressante",
+  photo: "Flavien.png",
+  description: "Junior web developer from Mexico, determined to provide innovative solutions. Strong time management and organizational skills. Outside of work, I'm a passionate cook and graphic designer.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -178,17 +177,17 @@ dev6 = Dev.new(
 )
 dev6.save!
 dev7 = Dev.new(
-  name: "Lorenzo",
-  email: "thoas@lucy.com",
+  name: "Jean-Gui",
+  email: "jean-gui@gmail.com",
   availability: false,
   password: "123456",
   phone: "0102030406",
-  area: "Graphism",
+  area: "Cookbooks",
   upvote: 12,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=7",
-  description: "Bonjour! Je suis Lorenzo, Mexicain, graphiste de base, et passioné de musique, films, illustration, BD et nouvelles technologies. Depuis beaucoup d'années j'ai voulu prendre une formation sur le design web et le developpement. c'est jusqu'aujourd'hui que je peux et je suis très content d' être au Wagon.",
+  photo: "JeanGuillaume.jpg",
+  description: "Passionate junior web developer who values creativity, communication, and continuous learning. Outside of coding, I'm a marketer and video enthusiast.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -198,17 +197,17 @@ dev7 = Dev.new(
 )
 dev7.save!
 dev8 = Dev.new(
-  name: "Rémy",
-  email: "thoma@lucy.com",
+  name: "Jonathan",
+  email: "jonathan@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
-  area: "Auto",
+  area: "Bootstrap",
   upvote: 5,
-  location: "Marseille",
+  location: "Nice",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=6",
-  description: "Dans le marketing web depuis 2003, j'ai toujours secrètement rêvé d'apprendre le développement. Envie de voir autre chose et de mieux comprendre le code.",
+  photo: "Jonathan.jpg",
+  description: "Young web developer with a positive approach and problem-solving skills. I'm also a mathematics teacher, which is an asset for coding.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -218,17 +217,17 @@ dev8 = Dev.new(
 )
 dev8.save!
 dev9 = Dev.new(
-  name: "Alice",
-  email: "tmas@lucy.com",
+  name: "Loris",
+  email: "loris@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
-  area: "Travel",
+  area: "OOP lover",
   upvote: 22,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=5",
-  description: "Bonjour, je suis Alice. Après avoir travaillé pendant 5 ans dans une agence de marketing direct à Paris en tant que chef de projet CRM, je souhaite désormais me spécialiser dans des projets plus techniques en étant davantage sur la conception de site internet et d'application mobile. Je souhaite dans un premier temps continuer dans la gestion de projet puis à terme monter en compétence sur un poste de développeuse web front end.",
+  photo: "Loris.jpg",
+  description: "Junior web developer focused on problem-solving, with adaptability and teamwork skills. Outside the office, I'm an avid hiker.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -239,17 +238,17 @@ dev9 = Dev.new(
 dev9.save!
 
 dev10 = Dev.new(
-  name: "Adam",
-  email: "ths@lucy.com",
+  name: "None",
+  email: "none@gmail.com",
   availability: false,
   password: "123456",
   phone: "0102030406",
-  area: "Football",
+  area: "Carrément",
   upvote: 14,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=4",
-  description: "J'ai longtemps travaillé dans l'hôtellerie et j'ai décidé de me lancer dans le coding par passion, dans le but de devenir un pro et travailler à travers le monde. J'aime l'idée de travailler en bootcamp afin d'apprendre de manière intensive, c'est pourquoi j'ai rejoint le Wagon",
+  photo: "None.jpg",
+  description: "I've specialized in the healthcare field as I also have activities in this domain. I'm looking for part-time missions and eagerly awaiting your requests.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -260,19 +259,17 @@ dev10 = Dev.new(
 dev10.save!
 
 dev11 = Dev.new(
-  name: "Anais",
-  email: "ts@lucy.com",
+  name: "Theo",
+  email: "theo@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
-  area: "Communication",
+  area: "Hair-twisting",
   upvote: 7,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=3",
-  description: "Bonjour,
-  Je m'appelle Anaïs, j'ai 24 ans et je viens de finir mes études en école de commerce. J'ai créé mon agence de communication il y a 3 ans et j'aimerais m'orienter vers l'IA sur un nouveau projet pour lequel j'ai besoin de bases en coding informatique.
-  Alors me voilà !",
+  photo: "Theo.jpg",
+  description:"Determined junior web developer committed to creating exceptional user experiences. I'm also specialized in communication and marketing through my web agency.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -283,8 +280,8 @@ dev11 = Dev.new(
 dev11.save!
 
 dev12 = Dev.new(
-  name: "Emma",
-  email: "themmaas@lucy.com",
+  name: "Yann",
+  email: "yann@gmail.com",
   availability: true,
   password: "123456",
   phone: "0102030406",
@@ -292,8 +289,8 @@ dev12 = Dev.new(
   upvote: 63,
   location: "Marseille",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=2",
-  description: "Provenant d'un master biologie-santé avec peu de débouchés, j'ai décidé de me réorienter vers le développement web pour faire un métier qui offre plus de liberté, mais qui permet de travailler dans un domaine où la réflexion et la créativité sont présentes.",
+  photo: "Yann.jpg",
+  description: "Junior web developer with a strong work ethic and a team player mindset. I'm passionate about the healthcare industry.",
   github_link: "https://github.com/will-keirs",
   linkedin_link: "https://fr.linkedin.com/in/lorenzo-lara-331a9972",
   website_link: "https://lorenzolara.myportfolio.com/",
@@ -304,17 +301,17 @@ dev12 = Dev.new(
 dev12.save!
 
 dev13 = Dev.new(
-  name: "Halima",
-  email: "Halima@lucy.com",
+  name: "Nais",
+  email: "nais@gmail.com",
   availability: false,
 
   password: "123456",
   phone: "0102030406",
   area: "Dance",
   upvote: 14,
-  location: "Marseille",
+  location: "Communication",
   diploma: "Le Wagon 2023",
-  photo: "https://loremflickr.com/320/240?random=1",
+  photo: "Nais.jpg",
   description: "Happy to integrate the training and grateful to have helped me to concretize my project by implementing my request
   I like coder and when I'm not coding I dance and I mix",
   github_link: "https://github.com/will-keirs",
@@ -326,7 +323,7 @@ dev13 = Dev.new(
 )
 dev13.save!
 match = Match.new(
-  comment: "Amazing",
+  comment: "Amazing work",
   dev: dev7,
   mission: mission1,
   accepted: true
@@ -449,42 +446,34 @@ sk12 = SoftSkill.create!(skill: "Rigour")
 sk13 = SoftSkill.create!(skill: "Joyful")
 
 Devlangmission.create!(dev: dev1, language: l)
-Devlangmission.create!(dev: dev2, language: l2)
-Devlangmission.create!(dev: dev3, language: l5)
+Devlangmission.create!(dev: dev2, language: l3)
+Devlangmission.create!(dev: dev3, language: l4)
 Devlangmission.create!(dev: dev4, language: l)
-Devlangmission.create!(dev: dev1, language: l4)
-Devlangmission.create!(dev: dev2, language: l5)
-Devlangmission.create!(dev: dev3, language: l6)
-Devlangmission.create!(dev: dev4, language: l9)
 Devlangmission.create!(dev: dev1, language: l8)
-Devlangmission.create!(dev: dev2, language: l10)
-Devlangmission.create!(dev: dev3, language: l10)
-Devlangmission.create!(dev: dev4, language: l4)
-Devlangmission.create!(dev: dev1, language: l2)
-Devlangmission.create!(dev: dev3, language: l7)
-Devlangmission.create!(dev: dev1, language: l1)
-Devlangmission.create!(dev: dev2, language: l9)
+Devlangmission.create!(dev: dev2, language: l5)
+Devlangmission.create!(dev: dev3, language: l11)
+Devlangmission.create!(dev: dev4, language: l12)
+Devlangmission.create!(dev: dev1, language: l11)
+Devlangmission.create!(dev: dev2, language: l4)
 Devlangmission.create!(dev: dev3, language: l3)
-Devlangmission.create!(dev: dev4, language: l7)
+Devlangmission.create!(dev: dev4, language: l8)
 
-Devlangmission.create!(dev: dev5, language: l2)
+Devlangmission.create!(dev: dev5, language: l)
 Devlangmission.create!(dev: dev6, language: l3)
-Devlangmission.create!(dev: dev7, language: l6)
+Devlangmission.create!(dev: dev7, language: l3)
 Devlangmission.create!(dev: dev8, language: l)
-Devlangmission.create!(dev: dev9, language: l5)
+Devlangmission.create!(dev: dev9, language: l3)
 Devlangmission.create!(dev: dev10, language: l5)
-Devlangmission.create!(dev: dev11, language: l6)
-Devlangmission.create!(dev: dev12, language: l7)
-Devlangmission.create!(dev: dev13, language: l8)
-Devlangmission.create!(dev: dev5, language: l9)
+Devlangmission.create!(dev: dev11, language: l11)
+Devlangmission.create!(dev: dev12, language: l10)
+Devlangmission.create!(dev: dev5, language: l8)
 Devlangmission.create!(dev: dev6, language: l10)
 Devlangmission.create!(dev: dev7, language: l4)
-Devlangmission.create!(dev: dev8, language: l2)
-Devlangmission.create!(dev: dev9, language: l7)
-Devlangmission.create!(dev: dev10, language: l1)
-Devlangmission.create!(dev: dev11, language: l2)
+Devlangmission.create!(dev: dev8, language: l3)
+Devlangmission.create!(dev: dev9, language: l4)
+Devlangmission.create!(dev: dev10, language: l)
+Devlangmission.create!(dev: dev11, language: l12)
 Devlangmission.create!(dev: dev12, language: l3)
-Devlangmission.create!(dev: dev13, language: l)
 
 Devlangmission.create!(language: l4, mission: mission1)
 Devlangmission.create!(language: l2, mission: mission1)
@@ -494,63 +483,47 @@ Devlangmission.create!(language: l9, mission: mission2)
 Devlangmission.create!(language: l3, mission: mission2)
 Devlangmission.create!(language: l7, mission: mission1)
 
-
-Devsoftmission.create!(dev: dev1, soft_skill: sk1)
-Devsoftmission.create!(dev: dev2, soft_skill: sk2)
-Devsoftmission.create!(dev: dev3, soft_skill: sk3)
-Devsoftmission.create!(dev: dev4, soft_skill: sk4)
-Devsoftmission.create!(dev: dev1, soft_skill: sk)
+Devsoftmission.create!(dev: dev4, soft_skill: sk8)
 Devsoftmission.create!(dev: dev2, soft_skill: sk5)
-Devsoftmission.create!(dev: dev3, soft_skill: sk6)
-Devsoftmission.create!(dev: dev4, soft_skill: sk7)
-Devsoftmission.create!(dev: dev1, soft_skill: sk8)
-Devsoftmission.create!(dev: dev2, soft_skill: sk9)
+Devsoftmission.create!(dev: dev3, soft_skill: sk11)
 Devsoftmission.create!(dev: dev3, soft_skill: sk10)
 Devsoftmission.create!(dev: dev4, soft_skill: sk11)
 Devsoftmission.create!(dev: dev1, soft_skill: sk12)
 Devsoftmission.create!(dev: dev2, soft_skill: sk13)
 Devsoftmission.create!(dev: dev3, soft_skill: sk)
-Devsoftmission.create!(dev: dev4, soft_skill: sk2)
-Devsoftmission.create!(dev: dev1, soft_skill: sk3)
-Devsoftmission.create!(dev: dev2, soft_skill: sk4)
 Devsoftmission.create!(dev: dev3, soft_skill: sk5)
-Devsoftmission.create!(dev: dev4, soft_skill: sk6)
-Devsoftmission.create!(dev: dev1, soft_skill: sk7)
+Devsoftmission.create!(dev: dev1, soft_skill: sk8)
 Devsoftmission.create!(dev: dev2, soft_skill: sk8)
-Devsoftmission.create!(dev: dev3, soft_skill: sk9)
 Devsoftmission.create!(dev: dev4, soft_skill: sk10)
 Devsoftmission.create!(dev: dev1, soft_skill: sk11)
 Devsoftmission.create!(dev: dev2, soft_skill: sk12)
 Devsoftmission.create!(dev: dev3, soft_skill: sk13)
 Devsoftmission.create!(dev: dev4, soft_skill: sk)
 
-Devsoftmission.create!(dev: dev5, soft_skill: sk1)
-Devsoftmission.create!(dev: dev6, soft_skill: sk2)
+Devsoftmission.create!(dev: dev5, soft_skill: sk)
+Devsoftmission.create!(dev: dev6, soft_skill: sk3)
 Devsoftmission.create!(dev: dev7, soft_skill: sk3)
-Devsoftmission.create!(dev: dev8, soft_skill: sk4)
+Devsoftmission.create!(dev: dev8, soft_skill: sk10)
 Devsoftmission.create!(dev: dev9, soft_skill: sk)
 Devsoftmission.create!(dev: dev10, soft_skill: sk5)
-Devsoftmission.create!(dev: dev11, soft_skill: sk6)
-Devsoftmission.create!(dev: dev12, soft_skill: sk7)
-Devsoftmission.create!(dev: dev13, soft_skill: sk8)
-Devsoftmission.create!(dev: dev5, soft_skill: sk2)
-Devsoftmission.create!(dev: dev6, soft_skill: sk3)
-Devsoftmission.create!(dev: dev7, soft_skill: sk4)
-Devsoftmission.create!(dev: dev8, soft_skill: sk5)
-Devsoftmission.create!(dev: dev9, soft_skill: sk6)
-Devsoftmission.create!(dev: dev10, soft_skill: sk7)
-Devsoftmission.create!(dev: dev11, soft_skill: sk8)
-Devsoftmission.create!(dev: dev12, soft_skill: sk2)
-Devsoftmission.create!(dev: dev13, soft_skill: sk9)
-Devsoftmission.create!(dev: dev5, soft_skill: sk3)
+Devsoftmission.create!(dev: dev11, soft_skill: sk10)
+Devsoftmission.create!(dev: dev12, soft_skill: sk11)
+Devsoftmission.create!(dev: dev5, soft_skill: sk11)
 Devsoftmission.create!(dev: dev6, soft_skill: sk5)
-Devsoftmission.create!(dev: dev7, soft_skill: sk9)
+Devsoftmission.create!(dev: dev7, soft_skill: sk5)
+Devsoftmission.create!(dev: dev8, soft_skill: sk5)
+Devsoftmission.create!(dev: dev9, soft_skill: sk11)
+Devsoftmission.create!(dev: dev10, soft_skill: sk8)
+Devsoftmission.create!(dev: dev11, soft_skill: sk8)
+Devsoftmission.create!(dev: dev12, soft_skill: sk)
+Devsoftmission.create!(dev: dev5, soft_skill: sk3)
+Devsoftmission.create!(dev: dev6, soft_skill: sk10)
+Devsoftmission.create!(dev: dev7, soft_skill: sk13)
 Devsoftmission.create!(dev: dev8, soft_skill: sk10)
 Devsoftmission.create!(dev: dev9, soft_skill: sk3)
 Devsoftmission.create!(dev: dev10, soft_skill: sk)
 Devsoftmission.create!(dev: dev11, soft_skill: sk3)
 Devsoftmission.create!(dev: dev12, soft_skill: sk10)
-Devsoftmission.create!(dev: dev13, soft_skill: sk4)
 
 Devsoftmission.create!(soft_skill: sk1, mission: mission1)
 Devsoftmission.create!(soft_skill: sk2, mission: mission1)
